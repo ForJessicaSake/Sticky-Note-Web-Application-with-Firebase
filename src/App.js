@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createContext } from 'react';
+import UseFetch from './components/UseFetch';
+import NoteList from './components/NoteList';
+import Create from './components/Create';
+import Login from './components/Login';
+import NotesDetails from './components/NotesDetails';
+import './index.css'
+
+export const stateContext = createContext();
 
 function App() {
+
+  const { data, isPending } = UseFetch("notes");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <stateContext.Provider value={{ data, isPending }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/note/" element={<NoteList />} />
+          <Route path="/note/:id" element={<NotesDetails />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </Router>
+    </stateContext.Provider>
+  )
 }
 
-export default App;
+export default App
