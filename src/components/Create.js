@@ -2,7 +2,7 @@ import React from 'react'
 
 function Create() {
   return (
-    <h1 className="text-3xl font-bold underline">
+    <h1 className="create">
       Hello world!
     </h1>
   )
