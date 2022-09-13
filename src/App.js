@@ -15,17 +15,19 @@ function App() {
   const { data, isPending } = UseFetch("notes");
 
   return (
-    <stateContext.Provider value={{ data, isPending }}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/note/" element={<NoteList />} />
-          <Route path="/note/:id" element={<NotesDetails />} />
-          <Route path="/create" element={<Create />} />
-        </Routes>
-      </Router>
-    </stateContext.Provider>
+    <main className="font-catamaran">
+      <stateContext.Provider value={{ data, isPending }}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/note/" element={<NoteList />} />
+            <Route path="/note/:id" element={<NotesDetails />} />
+            <Route path="/create" element={<Create />} />
+          </Routes>
+        </Router>
+      </stateContext.Provider>
+    </main>
   )
 }
 

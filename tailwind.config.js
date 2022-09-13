@@ -4,11 +4,15 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "Pink": "#ff7191",
-                "purple": "#6c56c2",
-                "yellow": "#fdbf11"
-            }
+                Pink: "#ff7191",
+                purple: "#6c56c2",
+                yellow: "#fdbf11",
+                primary: "#fefefd"
+            },
+            fontFamily: {
+                catamaran: ["Catamaran", "sans-serif"],
+            },
         },
+        plugins: [],
     },
-    plugins: [],
 };
