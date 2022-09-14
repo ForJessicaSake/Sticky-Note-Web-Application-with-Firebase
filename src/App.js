@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 import UseFetch from './components/UseFetch';
 import Home from './components/Home'
 import NoteList from './components/NoteList';
@@ -13,11 +13,12 @@ export const stateContext = createContext();
 
 function App() {
 
+  const [loading, SetLoading] = useState(false)
   const { data, isPending } = UseFetch("notes");
 
   return (
     <main className="font-font text-secondary">
-      <stateContext.Provider value={{ data, isPending }}>
+      <stateContext.Provider value={{ data, isPending, loading, SetLoading}}>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
