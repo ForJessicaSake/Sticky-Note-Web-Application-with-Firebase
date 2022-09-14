@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { signUp, UseAuth } from './Firebase'
+import {signUp, UseAuth} from './Firebase'
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
@@ -8,14 +8,13 @@ import third from "../Images/third.png"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-function Login() {
+function SignUp() {
 
     const emailRef = useRef()
     const passwordRef = useRef();
     const [loading, setLoading] = useState(false)
 
     const currentUser = UseAuth()
-
 
     const handleSignUp = async () => {
         try {
@@ -84,13 +83,13 @@ function Login() {
                                 required
                                 ref={passwordRef}
                             ></input>
-                            <button className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 '>Login</button>
+                            <button className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12' onClick={handleSignUp}>Sign up</button>
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <span className='text-purple ml-2'> sign up! </span></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <span className='text-purple ml-2'> login! </span></p>
                             </section>
                         </section>
                     </section>
-                    <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
+                            <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
 
                 </main >
             }
@@ -98,4 +97,4 @@ function Login() {
     )
 }
 
-export default Login
+export default SignUp
