@@ -36,7 +36,7 @@ function Home() {
                                 <h2 class="text-2xl font-bold w-full sm:w-1/4">Ongoing project</h2>
                                 <aside class="flex items-center mb-3 mt-8">
                                     <mark class="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-white text-white flex-shrink-0">
-                                        <img class="w-5 h-5" src={pic} />
+                                        <img class="w-5 h-5" src={pic} alt="notes" />
                                     </mark>
                                     <figure class="bg-gray-300 rounded-full px-12 py-2"></figure>
                                 </aside>
@@ -92,19 +92,19 @@ function Home() {
                                 <h2 class="text-2xl font-bold w-full sm:w-1/4">Live Conversation</h2>
                                 <aside class="flex items-center mb-3 mt-8">
                                     <figure class="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img class="w-5 h-5" src={pic} />
+                                        <img class="w-5 h-5" src={pic} alt="notes" />
                                     </figure>
                                     <figure class="bg-gray-300 rounded-full px-12 py-2"></figure>
                                 </aside>
                                 <aside class="flex items-center mb-3 mt-8 justify-end">
                                     <figure class="bg-gray-300 rounded-full mr-3 px-12 py-2"></figure>
                                     <figure class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img class="w-5 h-5" src={pic} />
+                                        <img class="w-5 h-5" src={pic} alt="notes" />
                                     </figure>
                                 </aside>
                                 <aside class="flex items-center mb-3 mt-8">
                                     <figure class="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img class="w-5 h-5" src={pic} />
+                                        <img class="w-5 h-5" src={pic} alt="notes" />
                                     </figure>
                                     <figure class="bg-gray-300 rounded-full px-12 py-2"></figure>
                                 </aside>
@@ -163,13 +163,13 @@ function Home() {
                                     <figure class="bg-white rounded px-10 py-2 ml-3"></figure>
                                     <section>
                                         <figure class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
-                                            <img class="w-5 h-5" src={pic} />
+                                            <img class="w-5 h-5" src={pic} alt="notes" />
                                         </figure>
                                         <figure class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
-                                            <img class="w-5 h-5" src={pic} />
+                                            <img class="w-5 h-5" src={pic} alt="notes" />
                                         </figure>
                                         <figure class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
-                                            <img class="w-5 h-5" src={pic} />
+                                            <img class="w-5 h-5" src={pic} alt="notes" />
                                         </figure>
                                     </section>
                                 </aside>
