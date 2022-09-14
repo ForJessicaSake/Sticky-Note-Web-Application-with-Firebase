@@ -1,18 +1,23 @@
 import React from 'react'
 import Navbar from './Navbar';
 import pic from "../Images/first.png";
-
+import { UseAuth } from './Firebase'
 
 function Home() {
+    
+    const currentUser = UseAuth();
+
     return (
         <>
             <Navbar />
 
-
             {/* Hero section */}
+
             <section class="">
+                <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
+
                 <article class="container mx-auto flex px-5 py-24 items-center justify-center flex-col mt-4">
-                <p class="mb-4 bg-fuchsia-100 text-Pink text-lg p-2 rounded-full">Secure Task Management for Teams</p>
+                    <p class="mb-4 bg-fuchsia-100 text-Pink text-lg p-2 rounded-full">Secure Task Management for Teams</p>
                     <section class="text-center lg:w-2/3 w-full">
                         <h1 class="font-bold text-gray-900 sm:text-5xl text-4xl mb-4">Work on big ideas, <br />without the <span class="bg-purple text-white"> busywork.</span></h1>
                         <p class="mb-8 text-gray-900 leading-relaxed">From the small stuff to the big picture, GoodBucket organizes work so teams<br /> know what to do, why it matters, and how to get it done.</p>

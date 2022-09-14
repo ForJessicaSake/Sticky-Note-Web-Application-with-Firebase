@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react'
+import { useRef, useContext } from 'react'
+import { stateContext } from '../App';
 import {signUp, UseAuth} from './Firebase'
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
@@ -10,10 +11,10 @@ import "slick-carousel/slick/slick-theme.css"
 
 function SignUp() {
 
+    const { loading, setLoading } = useContext(stateContext)
+
     const emailRef = useRef()
     const passwordRef = useRef();
-    const [loading, setLoading] = useState(false)
-
     const currentUser = UseAuth()
 
     const handleSignUp = async () => {
