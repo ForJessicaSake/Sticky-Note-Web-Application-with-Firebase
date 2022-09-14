@@ -7,6 +7,7 @@ import Create from './components/Create';
 import Login from './components/Login';
 import NotesDetails from './components/NotesDetails';
 import './index.css'
+import SignUp from './components/SignUp';
 
 export const stateContext = createContext();
 
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/note/" element={<NoteList />} />
             <Route path="/note/:id" element={<NotesDetails />} />
             <Route path="/create" element={<Create />} />
