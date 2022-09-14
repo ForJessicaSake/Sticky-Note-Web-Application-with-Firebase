@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
-import { signUp, UseAuth } from './Firebase'
+import { useRef, useContext } from 'react'
+import { logIn } from './Firebase'
+import { stateContext } from '../App';
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
@@ -9,26 +10,24 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 function Login() {
+    const { loading, setLoading } = useContext(stateContext)
 
-    const emailRef = useRef()
+    const emailRef = useRef();
     const passwordRef = useRef();
-    const [loading, setLoading] = useState(false)
 
-    const currentUser = UseAuth()
-
-
-    const handleSignUp = async () => {
+    const handleLogin = async () => {
         try {
             setLoading(true)
-            await signUp(emailRef.current.value, passwordRef.current.value)
+            await logIn(emailRef.current.value, passwordRef.current.value)
             setLoading(false)
         }
         catch {
             alert(`Network error`)
             setLoading(false)
         }
-
     }
+   
+
 
     const settings = {
         slidesToShow: 1,
@@ -84,14 +83,14 @@ function Login() {
                                 required
                                 ref={passwordRef}
                             ></input>
-                            <button className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 '>Login</button>
+                            <button className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12' onClick={handleLogin}>Login</button>
+                            {/* <button className='bg-gray-50 text-purple w-96 mt-8 rounded-md items-center h-12 '>Log Out</button> */}
+
                             <section className="flex justify-center pt-36 align-middle">
                                 <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <span className='text-purple ml-2'> sign up! </span></p>
                             </section>
                         </section>
                     </section>
-                    <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
-
                 </main >
             }
         </section>
