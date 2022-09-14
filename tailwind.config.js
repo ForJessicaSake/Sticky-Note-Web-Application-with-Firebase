@@ -7,10 +7,11 @@ module.exports = {
                 Pink: "#ff7191",
                 purple: "#6c56c2",
                 yellow: "#fdbf11",
-                primary: "#fefefd"
+                primary: "#fefefd",
+                secondary: "#303030",
             },
             fontFamily: {
-                catamaran: ["Catamaran", "sans-serif"],
+                font: ["Poppins", "sans-serif"],
             },
         },
         plugins: [],

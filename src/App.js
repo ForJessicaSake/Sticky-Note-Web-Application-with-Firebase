@@ -15,7 +15,7 @@ function App() {
   const { data, isPending } = UseFetch("notes");
 
   return (
-    <main className="font-catamaran">
+    <main className="font-font text-secondary">
       <stateContext.Provider value={{ data, isPending }}>
         <Router>
           <Routes>
