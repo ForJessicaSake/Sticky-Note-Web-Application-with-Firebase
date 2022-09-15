@@ -1,4 +1,5 @@
 import { useRef, useContext } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import { logIn } from './Firebase'
 import { stateContext } from '../App';
 import Slider from 'react-slick'
@@ -10,21 +11,24 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 function Login() {
-    const { loading, setLoading } = useContext(stateContext)
 
+    const navigate = useNavigate()
+    const { loading, setLoading } = useContext(stateContext)
     const emailRef = useRef();
     const passwordRef = useRef();
 
     const handleLogin = async () => {
+        setLoading(true)
         try {
-            setLoading(true)
             await logIn(emailRef.current.value, passwordRef.current.value)
-            setLoading(false)
         }
         catch {
-            alert(`Network error`)
-            setLoading(false)
+            alert(`Error`)
         }
+        setLoading(false)
+        navigate('/notelist')
+
+
     }
    
 
@@ -69,25 +73,25 @@ function Login() {
                         <p className='mb-6 text-xs tracking-wide text'>Take notes the simple way for free, forever</p>
                         <section className='login-input flex flex-col font-medium'>
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm '
+                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm h-12'
                                 type='text'
-                                placeholder='email'
+                                placeholder='enter your email'
                                 required
                                 ref={emailRef}
                             ></input>
 
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm '
-                                placeholder='password must be 6 characters'
+                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm h-12 '
+                                placeholder='enter your password'
                                 type='password'
                                 required
                                 ref={passwordRef}
                             ></input>
-                            <button className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12' onClick={handleLogin}>Login</button>
+                            <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Login</button>
                             {/* <button className='bg-gray-50 text-purple w-96 mt-8 rounded-md items-center h-12 '>Log Out</button> */}
 
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <span className='text-purple ml-2'> sign up! </span></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to ='/signup'> sign up! </Link></p>
                             </section>
                         </section>
                     </section>

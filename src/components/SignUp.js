@@ -1,6 +1,7 @@
 import { useRef, useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { stateContext } from '../App';
-import {signUp, UseAuth} from './Firebase'
+import { signUp, UseAuth } from './Firebase'
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
@@ -11,27 +12,29 @@ import "slick-carousel/slick/slick-theme.css"
 
 function SignUp() {
 
-    const { loading, setLoading } = useContext(stateContext)
+    const navigate = useNavigate()
 
+    const { loading, setLoading } = useContext(stateContext)
     const emailRef = useRef()
     const passwordRef = useRef();
     const currentUser = UseAuth()
 
     const handleSignUp = async () => {
+        setLoading(true)
         try {
-            setLoading(true)
             await signUp(emailRef.current.value, passwordRef.current.value)
-            setLoading(false)
-        }
-        catch {
-            alert(`Network error`)
-            setLoading(false)
         }
 
+        catch {
+            alert(`Error`)
+        }
+        setLoading(false)
+        navigate('/login')
     }
 
     const settings = {
         slidesToShow: 1,
+        speed: 500,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
@@ -66,7 +69,7 @@ function SignUp() {
                     </section>
 
                     <section className="Login text-center flex flex-col	items-center pt-32 bg-primary tracking-wider rounded-3xl" >
-                        <h1 className='text-3xl mb-6 font-bold'>Hello again!</h1>
+                        <h1 className='text-3xl mb-6 font-bold'>Sign up!</h1>
                         <p className='mb-6 text-xs tracking-wide text'>Take notes the simple way for free, forever</p>
                         <section className='login-input flex flex-col font-medium'>
                             <input
@@ -84,13 +87,13 @@ function SignUp() {
                                 required
                                 ref={passwordRef}
                             ></input>
-                            <button className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12' onClick={handleSignUp}>Sign up</button>
+                            <button onClick={handleSignUp} className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Sign up</button>
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <span className='text-purple ml-2'> login! </span></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <Link className='text-purple ml-2' to = '/login'> login! </Link></p>
                             </section>
                         </section>
                     </section>
-                            <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
+                    <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
 
                 </main >
             }
