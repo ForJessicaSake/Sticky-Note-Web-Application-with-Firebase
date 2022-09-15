@@ -1,6 +1,6 @@
 import { useRef, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { logIn } from './Firebase'
+import { logIn  }from './Firebase'
 import { stateContext } from '../App';
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
@@ -9,6 +9,7 @@ import second from "../Images/second.png"
 import third from "../Images/third.png"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+
 
 function Login() {
 
@@ -26,9 +27,7 @@ function Login() {
             alert(`Error`)
         }
         setLoading(false)
-        navigate('/notelist')
-
-
+        navigate('/note')
     }
    
 
