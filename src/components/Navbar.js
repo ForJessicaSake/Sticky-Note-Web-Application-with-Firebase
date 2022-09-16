@@ -1,6 +1,7 @@
 import { Logout } from './Firebase'
 import { stateContext } from '../App';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const { setLoading } = useContext(stateContext)
@@ -14,22 +15,24 @@ function Navbar() {
     }
     setLoading(false)
   }
+  
   return (
-    <header class="text-black">
-      <section class="container flex flex-wrap px-5 lg:px-0 py-6 flex-col md:flex-row items-center">
-        {/* <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-          <a class="mr-5 cursor-pointer">Feature</a>
-          <a class="mr-5 cursor-pointer">Resources</a>
-          <a class="mr-5 cursor-pointer">Pricing</a>
-          <a class="cursor-pointer">Enterprise</a>
-        </nav>  */}
+    <section className="">
+      <header className="container mx-auto flex flex-wrap px-4 lg:px-52 py-5 flex-col md:flex-row items-center">
+        <Link to="/" className="flex font-semibold items-center text-gray-900 mb-4 md:mb-0">
+          <span className="ml-3 text-2xl text-purple">Dockett</span>
+        </Link>
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <Link to="/" className="mr-5 cursor-pointer">Home</Link>
+          <Link to="/note" className="mr-5 cursor-pointer">Notes</Link>
+          <Link to="/create" className="mr-5 cursor-pointer">Create</Link>
+        </nav>
+        <Link to="/signup"><button className="inline-flex items-center bg-white text-black border-2 border-black py-1 px-5 focus:outline-none rounded-full text-base mt-4 md:mt-0">Sign Up </button></Link>
+        <Link to="/login"><button className="inline-flex items-center bg-blue text-white border-0 py-2 px-5 focus:outline-none rounded-full text-base mt-4 lg:ml-4 ml-0 md:mt-0" onClick={handleLogOut}>Log out</button></Link>
+      </header>
+    </section>
 
-        <aside class="lg:w-2/5 inline-flex ml-5 lg:ml-0">
-          <button class="inline-flex items-center bg-white text-black border-2 border-black py-1 px-5 focus:outline-none rounded-full text-base mt-4 md:mt-0">Sign Up</button>
-          <button class="inline-flex items-center bg-black text-white border-0 py-1 px-5 focus:outline-none rounded-full text-base mt-4 ml-4 md:mt-0" onClick={handleLogOut}>Log out</button>
-        </aside>
-      </section>
-    </header>
+
   )
 }
 
