@@ -13,7 +13,6 @@ import "slick-carousel/slick/slick-theme.css"
 function SignUp() {
 
     const navigate = useNavigate()
-
     const { loading, setLoading } = useContext(stateContext)
     const emailRef = useRef()
     const passwordRef = useRef();
