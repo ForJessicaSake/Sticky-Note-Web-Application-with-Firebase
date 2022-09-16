@@ -1,7 +1,7 @@
 import { useRef, useContext } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import { logIn  }from './Firebase'
+import { Link, useNavigate } from 'react-router-dom'
 import { stateContext } from '../App';
+import { signUp, UseAuth } from './Firebase'
 import Slider from 'react-slick'
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
@@ -10,33 +10,33 @@ import third from "../Images/third.png"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-
-function Login() {
+function SignUp() {
 
     const navigate = useNavigate()
     const { loading, setLoading } = useContext(stateContext)
-    const emailRef = useRef();
+    const emailRef = useRef()
     const passwordRef = useRef();
+    const currentUser = UseAuth()
 
-    const handleLogin = async () => {
+    const handleSignUp = async () => {
         setLoading(true)
         try {
-            await logIn(emailRef.current.value, passwordRef.current.value)
+            await signUp(emailRef.current.value, passwordRef.current.value)
         }
+
         catch {
             alert(`Error`)
         }
         setLoading(false)
-        navigate('/note')
+        navigate('/login')
     }
-   
-
 
     const settings = {
         slidesToShow: 1,
+        speed: 500,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         infinite: true,
         pauseOnHover: true
     }
@@ -68,36 +68,37 @@ function Login() {
                     </section>
 
                     <section className="Login text-center flex flex-col	items-center pt-32 bg-primary tracking-wider rounded-3xl" >
-                        <h1 className='text-3xl mb-6 font-bold'>Hello again!</h1>
+                        <h1 className='text-3xl mb-6 font-bold'>Sign up!</h1>
                         <p className='mb-6 text-xs tracking-wide text'>Take notes the simple way for free, forever</p>
                         <section className='login-input flex flex-col font-medium'>
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm h-12'
+                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm '
                                 type='text'
-                                placeholder='enter your email'
+                                placeholder='email'
                                 required
                                 ref={emailRef}
                             ></input>
 
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm h-12 '
-                                placeholder='enter your password'
+                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm '
+                                placeholder='password must be 6 characters'
                                 type='password'
                                 required
                                 ref={passwordRef}
-                                minlength='6'
+                                minlength ='6'
                             ></input>
-                            <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Login</button>
-
+                            <button onClick={handleSignUp} className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Sign up</button>
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to ='/signup'> sign up! </Link></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <Link className='text-purple ml-2' to = '/login'> login! </Link></p>
                             </section>
                         </section>
                     </section>
+                    <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
+
                 </main >
             }
         </section>
     )
 }
 
-export default Login
+export default SignUp

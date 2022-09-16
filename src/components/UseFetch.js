@@ -5,16 +5,17 @@ import { onSnapshot, collection } from 'firebase/firestore'
 function UseFetch(collectionName) {
 
     const [data, setData] = useState([])
-    const [isPending, setIsPending] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         onSnapshot(collection(db, collectionName), (snapshot) => {
             setData(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-            setIsPending(false)
+            setLoading(false)
         })
     }, [collectionName])
 
-  return {data, isPending} 
+
+  return {data, loading, setLoading} 
 }
 
 export default UseFetch;

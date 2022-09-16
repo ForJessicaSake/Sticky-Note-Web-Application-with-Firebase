@@ -7,10 +7,23 @@ module.exports = {
                 Pink: "#ff7191",
                 purple: "#6c56c2",
                 yellow: "#fdbf11",
-                primary: "#fefefd"
+                primary: "#fefefd",
+                secondary: "#303030",
+                blue: "#6cb5de",
+                pink: "#f0a8ab",
+                Yellow: "#ebe283",
+                grey: "#e9e9e9",
             },
             fontFamily: {
-                catamaran: ["Catamaran", "sans-serif"],
+                font: ["Poppins", "sans-serif"],
+                fontsp: ["Catamaran", "sans-serif"],
+            },
+
+            width: {
+                w: "48rem",
+            },
+            height: {
+                h: "26rem",
             },
         },
         plugins: [],
