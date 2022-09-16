@@ -9,10 +9,21 @@ module.exports = {
                 yellow: "#fdbf11",
                 primary: "#fefefd",
                 secondary: "#303030",
+                blue: "#6cb5de",
+                pink: "#f0a8ab",
+                Yellow: "#ebe283",
+                grey: "#e9e9e9",
             },
             fontFamily: {
                 font: ["Poppins", "sans-serif"],
                 fontsp: ["Catamaran", "sans-serif"],
+            },
+
+            width: {
+                w: "48rem",
+            },
+            height: {
+                h: "26rem",
             },
         },
         plugins: [],

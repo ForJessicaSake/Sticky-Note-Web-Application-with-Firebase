@@ -1,12 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar';
 import pic from "../Images/first.png";
-import { UseAuth } from './Firebase'
 
 function Home() {
     
-    const currentUser = UseAuth();
-
     return (
         <>
             <Navbar />
@@ -14,7 +11,6 @@ function Home() {
             {/* Hero section */}
 
             <section class="">
-                <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
 
                 <article class="container mx-auto flex px-5 py-24 items-center justify-center flex-col mt-4">
                     <p class="mb-4 bg-fuchsia-100 text-Pink text-lg p-2 rounded-full">Secure Task Management for Teams</p>
