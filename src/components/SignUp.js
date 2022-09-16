@@ -85,6 +85,7 @@ function SignUp() {
                                 type='password'
                                 required
                                 ref={passwordRef}
+                                minlength ='6'
                             ></input>
                             <button onClick={handleSignUp} className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Sign up</button>
                             <section className="flex justify-center pt-36 align-middle">

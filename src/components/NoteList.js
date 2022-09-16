@@ -14,7 +14,9 @@ function NoteList() {
 
     return (
         <main className='container flex m-6 text-secondary'>
-            <Sidebar/>
+        
+            <Sidebar text="Add Note" url="/create"/>
+
             <section className="container-two flex flex-col align-center">
                 <div className='flex justify-between'>
                     <h1 className='text-xl font-bold mb-10 ml-6'>My Notes</h1>
@@ -25,7 +27,6 @@ function NoteList() {
                     />
                     <p className='text-secondary text-xs w-36 flex justify-around'>{`${currentUser?.email}`}<ImUserCheck /></p>
                 </div>
-
 
                 <section className='bg-primary flex flex-col rounded-2xl p-6'>
                     <h1 className='text-md font-bold'>Recent Folders</h1>
@@ -47,8 +48,6 @@ function NoteList() {
                         ))}
                     </section>
                 </section>
-
-
             </section>
 
 

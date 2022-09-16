@@ -5,7 +5,7 @@ import { AiOutlineHome, AiOutlineFileAdd } from 'react-icons/ai'
 import { useContext } from 'react'
 import { stateContext } from '../App'
 
-function Sidebar() {
+function Sidebar({text, url}) {
     const {setLoading} = useContext(stateContext);
     const navigate = useNavigate();
 
@@ -22,9 +22,9 @@ function Sidebar() {
     }
 
   return (
-      <section className='container-one pl-2  w-36 flex flex-col items-center'>
+      <section className='container-one pl-2  w-44 flex flex-col items-center'>
           <h1 className='text-lg font-bold text-blue mb-16'>Dockett</h1>
-          <Link to='/add' className=' mb-4 flex tracking-wide text-sm items-center'><AiOutlineFileAdd /><span className='ml-2 font-bold'>Add Note</span></Link>
+          <Link to={url} className=' mb-4 flex tracking-wide text-sm items-center'><AiOutlineFileAdd /><span className='ml-2 font-bold'>{text}</span></Link>
           <section className='animate-bounce w-8 h-8 mt-4 mb-12'>
               <figure className='w-4 h-4 rounded-full bg-amber-200 mb-2'></figure>
               <figure className='w-4 h-4 rounded-full bg-blue mt-2' ></figure>

@@ -85,9 +85,9 @@ function Login() {
                                 type='password'
                                 required
                                 ref={passwordRef}
+                                minlength='6'
                             ></input>
                             <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Login</button>
-                            {/* <button className='bg-gray-50 text-purple w-96 mt-8 rounded-md items-center h-12 '>Log Out</button> */}
 
                             <section className="flex justify-center pt-36 align-middle">
                                 <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to ='/signup'> sign up! </Link></p>
