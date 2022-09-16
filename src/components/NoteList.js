@@ -35,7 +35,6 @@ function NoteList() {
                         <p> What are we writing today?</p>
 
                     </header>
-
                     <section className=' grid grid-cols-3 place-content-center gap-6'>
                         {loading && <Feed/>}
                         {data.map((notes) => (

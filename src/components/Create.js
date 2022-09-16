@@ -30,7 +30,7 @@ function Create() {
           value={content}
           onChange={(e) => { setContent(e.target.value) }}
         ></textarea>
-        <button className='border-purple bg-blue text-white w-56 mt-8 rounded-md items-center h-12'>Add Sticky Note</button>
+        <button className=' bg-blue text-white w-56 mt-8 rounded-md items-center h-12'>Add Sticky Note</button>
       </section>
     
     </main>
