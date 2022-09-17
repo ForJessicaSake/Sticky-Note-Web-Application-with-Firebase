@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { stateContext } from '../App';
 import { signUp, UseAuth } from './Firebase'
 import Slider from 'react-slick'
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
 import second from "../Images/second.png"
@@ -12,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css"
 
 function SignUp() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const { loading, setLoading } = useContext(stateContext)
     const emailRef = useRef()
     const passwordRef = useRef();
@@ -22,13 +24,44 @@ function SignUp() {
         setLoading(true)
         try {
             await signUp(emailRef.current.value, passwordRef.current.value)
+            navigate('/login')
         }
+        catch (err) {
+            if (err.code === "auth/weak-password") {
+                toast.info('Weak password!', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
 
-        catch {
-            alert(`Error`)
+            } else if (err.code === "auth/email-already-in-use") {
+                toast.info('Email already in use, kindly log in', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else {
+                toast.info('Network error, kindly check your internet connection', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
+            setLoading(false)
         }
         setLoading(false)
-        navigate('/login')
     }
 
     const settings = {
@@ -72,7 +105,7 @@ function SignUp() {
                         <p className='mb-6 text-xs tracking-wide text'>Take notes the simple way for free, forever</p>
                         <section className='login-input flex flex-col font-medium'>
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm '
+                                className='w-96	border-solid border border-gray-200 p-2 h-12 mb-6 rounded-2xl text-sm '
                                 type='text'
                                 placeholder='email'
                                 required
@@ -80,23 +113,34 @@ function SignUp() {
                             ></input>
 
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm '
+                                className='w-96	border-solid border border-gray-200 p-2 h-12 rounded-2xl text-sm '
                                 placeholder='password must be 6 characters'
                                 type='password'
                                 required
                                 ref={passwordRef}
-                                minlength ='6'
                             ></input>
                             <button onClick={handleSignUp} className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Sign up</button>
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <Link className='text-purple ml-2' to = '/login'> login! </Link></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <Link className='text-purple ml-2' to='/login'> login! </Link></p>
                             </section>
                         </section>
                     </section>
                     <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
-
+                    <ToastContainer
+                        theme="colored"
+                        position="bottom-right"
+                        autoClose={2000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
                 </main >
             }
+
         </section>
     )
 }

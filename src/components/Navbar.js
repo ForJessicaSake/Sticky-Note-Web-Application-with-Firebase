@@ -1,21 +1,6 @@
-import { Logout } from './Firebase'
-import { stateContext } from '../App';
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  const { setLoading } = useContext(stateContext)
-
-  const handleLogOut = async () => {
-    setLoading(true)
-    try {
-      await Logout();
-    } catch {
-      alert('Error')
-    }
-    setLoading(false)
-  }
-  
   return (
     <section className="">
       <header className="container mx-auto flex flex-wrap px-4 lg:px-52 py-5 flex-col md:flex-row items-center">
@@ -28,7 +13,7 @@ function Navbar() {
           <Link to="/create" className="mr-5 cursor-pointer">Create</Link>
         </nav>
         <Link to="/signup"><button className="inline-flex items-center bg-white text-black border-2 border-black py-1 px-5 focus:outline-none rounded-full text-base mt-4 md:mt-0">Sign Up </button></Link>
-        <Link to="/login"><button className="inline-flex items-center bg-blue text-white border-0 py-2 px-5 focus:outline-none rounded-full text-base mt-4 lg:ml-4 ml-0 md:mt-0" onClick={handleLogOut}>Log out</button></Link>
+        <Link to="/login"><button className="inline-flex items-center bg-blue text-white border-0 py-2 px-5 focus:outline-none rounded-full text-base mt-4 lg:ml-4 ml-0 md:mt-0" >Log In</button></Link>
       </header>
     </section>
 

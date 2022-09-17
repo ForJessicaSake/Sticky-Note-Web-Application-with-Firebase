@@ -25,7 +25,7 @@ function NoteList() {
                         className='w-96 border-2 border-gray-50 bg-primary h-2 p-4 rounded-2xl text-sm'
                         placeholder='Search'
                     />
-                    <p className='text-secondary text-xs w-36 flex justify-around'>{`${currentUser?.email}`}<ImUserCheck /></p>
+                    <p className='text-secondary text-xs w-48 flex justify-around'>{`${currentUser?.email}`}<ImUserCheck /></p>
                 </div>
 
                 <section className='bg-primary flex flex-col rounded-2xl p-6'>
