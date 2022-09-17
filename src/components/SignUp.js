@@ -127,7 +127,6 @@ function SignUp() {
                     </section>
                     <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
                     <ToastContainer
-                        theme="colored"
                         position="bottom-right"
                         autoClose={2000}
                         hideProgressBar={false}

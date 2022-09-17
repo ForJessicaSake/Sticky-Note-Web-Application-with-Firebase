@@ -58,7 +58,7 @@ function Login() {
                     progress: undefined,
                 });
             } else {
-                toast.info('Network Error, kindly check your internet connection', {
+                toast.info('Network error, kindly check your internet connection', {
                     position: "bottom-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -138,7 +138,6 @@ function Login() {
                         </section>
                     </section>
                     <ToastContainer
-                        theme="colored"
                         position="bottom-right"
                         autoClose={2000}
                         hideProgressBar={false}
