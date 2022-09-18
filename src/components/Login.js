@@ -1,8 +1,10 @@
 import { useRef, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { logIn  }from './Firebase'
+import { logIn } from './Firebase'
 import { stateContext } from '../App';
 import Slider from 'react-slick'
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
 import Loading from './Loading/Loading'
 import first from "../Images/first.png"
 import second from "../Images/second.png"
@@ -22,15 +24,55 @@ function Login() {
         setLoading(true)
         try {
             await logIn(emailRef.current.value, passwordRef.current.value)
+            navigate('/note')
         }
-        catch {
-            alert(`Error`)
+        catch (err) {
+            if (err.code === "auth/wrong-password") {
+                toast.info('Invalid Password', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else if (err.code === "auth/user-not-found") {
+                toast.info('User does not exist', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else if (err.code === "auth/user-disabled") {
+                toast.info('Account disabled', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else {
+                toast.info('Network error, kindly check your internet connection', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
+            setLoading(false)
         }
         setLoading(false)
-        navigate('/note')
-    }
-   
 
+    }
 
     const settings = {
         slidesToShow: 1,
@@ -50,8 +92,9 @@ function Login() {
 
                             <figure className='flex justify-center align-middle'>
                                 <img src={first} alt="notes" className='w-96' />
-                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-4 mt-28'>New Scheduling Options And Management Options</figcaption>
-                                <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p></figure>
+                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-4 mt-28'>New Scheduling Options And Management Options.</figcaption>
+                                <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p>
+                            </figure>
 
                             <figure >
                                 <img src={second} alt="notes" className='w-96' />
@@ -74,26 +117,37 @@ function Login() {
                             <input
                                 className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm h-12'
                                 type='text'
-                                placeholder='enter your email'
+                                placeholder='email'
                                 required
                                 ref={emailRef}
                             ></input>
 
                             <input
                                 className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm h-12 '
-                                placeholder='enter your password'
+                                placeholder='password'
                                 type='password'
                                 required
                                 ref={passwordRef}
-                                minlength='6'
+                                minLength='6'
                             ></input>
                             <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Login</button>
 
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to ='/signup'> sign up! </Link></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to='/signup'> sign up! </Link></p>
                             </section>
                         </section>
                     </section>
+                    <ToastContainer
+                        position="bottom-right"
+                        autoClose={2000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
                 </main >
             }
         </section>
