@@ -14,11 +14,21 @@ import "slick-carousel/slick/slick-theme.css"
 
 function SignUp() {
 
+//storing the initialized  hook to a variable
+
     const navigate = useNavigate();
+
+ //retreiving the global variables from the context hook
+
     const { loading, setLoading } = useContext(stateContext)
-    const emailRef = useRef()
+
+//initializing the refs
+   const emailRef = useRef()
+
     const passwordRef = useRef();
     const currentUser = UseAuth()
+
+//declaring the signup functionality
 
     const handleSignUp = async () => {
         setLoading(true)
@@ -63,6 +73,8 @@ function SignUp() {
         }
         setLoading(false)
     }
+
+    //react slick settings 
 
     const settings = {
         slidesToShow: 1,
