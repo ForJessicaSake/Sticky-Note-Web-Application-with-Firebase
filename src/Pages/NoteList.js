@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { stateContext } from '../App'
-import Feed from './Loading/Feed';
-import Sidebar from './Sidebar';
-import { UseAuth } from './Firebase'
+import Feed from '../components/Loading/Feed';
+import Sidebar from '../components/Sidebar';
+import { UseAuth } from '../components/Firebase'
 import { ImUserCheck } from 'react-icons/im'
 import { FaEdit, } from 'react-icons/fa'
 

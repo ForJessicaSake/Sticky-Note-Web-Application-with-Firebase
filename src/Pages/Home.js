@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 import pic from "../Images/first.png";
 import { FaVideo } from 'react-icons/fa'
 

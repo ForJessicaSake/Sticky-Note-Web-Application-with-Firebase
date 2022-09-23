@@ -1,34 +1,34 @@
 import { useRef, useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import { logIn } from '../components/Firebase'
 import { stateContext } from '../App';
-import { signUp, UseAuth } from './Firebase'
 import Slider from 'react-slick'
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
-import Loading from './Loading/Loading'
+import Loading from '../components/Loading/Loading'
 import first from "../Images/first.png"
 import second from "../Images/second.png"
 import third from "../Images/third.png"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-function SignUp() {
 
-    const navigate = useNavigate();
+function Login() {
+
+    const navigate = useNavigate()
     const { loading, setLoading } = useContext(stateContext)
-    const emailRef = useRef()
+    const emailRef = useRef();
     const passwordRef = useRef();
-    const currentUser = UseAuth()
 
-    const handleSignUp = async () => {
+    const handleLogin = async () => {
         setLoading(true)
         try {
-            await signUp(emailRef.current.value, passwordRef.current.value)
-            navigate('/login')
+            await logIn(emailRef.current.value, passwordRef.current.value)
+            navigate('/note')
         }
         catch (err) {
-            if (err.code === "auth/weak-password") {
-                toast.info('Weak password!', {
+            if (err.code === "auth/wrong-password") {
+                toast.info('Invalid Password', {
                     position: "bottom-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -37,9 +37,18 @@ function SignUp() {
                     draggable: true,
                     progress: undefined,
                 });
-
-            } else if (err.code === "auth/email-already-in-use") {
-                toast.info('Email already in use, kindly log in', {
+            } else if (err.code === "auth/user-not-found") {
+                toast.info('User does not exist', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else if (err.code === "auth/user-disabled") {
+                toast.info('Account disabled', {
                     position: "bottom-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -62,14 +71,14 @@ function SignUp() {
             setLoading(false)
         }
         setLoading(false)
+
     }
 
     const settings = {
         slidesToShow: 1,
-        speed: 500,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
         infinite: true,
         pauseOnHover: true
     }
@@ -83,8 +92,9 @@ function SignUp() {
 
                             <figure className='flex justify-center align-middle'>
                                 <img src={first} alt="notes" className='w-96' />
-                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-4 mt-28'>New Scheduling Options And Management Options</figcaption>
-                                <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p></figure>
+                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-4 mt-28'>New Scheduling Options And Management Options.</figcaption>
+                                <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p>
+                            </figure>
 
                             <figure >
                                 <img src={second} alt="notes" className='w-96' />
@@ -101,11 +111,11 @@ function SignUp() {
                     </section>
 
                     <section className="Login text-center flex flex-col	items-center pt-32 bg-primary tracking-wider rounded-3xl" >
-                        <h1 className='text-3xl mb-6 font-bold'>Sign up!</h1>
+                        <h1 className='text-3xl mb-6 font-bold'>Hello again!</h1>
                         <p className='mb-6 text-xs tracking-wide text'>Take notes the simple way for free, forever</p>
                         <section className='login-input flex flex-col font-medium'>
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 h-12 mb-6 rounded-2xl text-sm '
+                                className='w-96	border-solid border border-gray-200 p-2 mb-6 rounded-2xl text-sm h-12'
                                 type='text'
                                 placeholder='email'
                                 required
@@ -113,19 +123,20 @@ function SignUp() {
                             ></input>
 
                             <input
-                                className='w-96	border-solid border border-gray-200 p-2 h-12 rounded-2xl text-sm '
-                                placeholder='password must be 6 characters'
+                                className='w-96	border-solid border border-gray-200 p-2 rounded-2xl text-sm h-12 '
+                                placeholder='password'
                                 type='password'
                                 required
                                 ref={passwordRef}
+                                minLength='6'
                             ></input>
-                            <button onClick={handleSignUp} className=' bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Sign up</button>
+                            <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12'>Login</button>
+
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20">Already have an account? <Link className='text-purple ml-2' to='/login'> login! </Link></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20">Don't have an account yet, <Link className='text-purple ml-2' to='/signup'> sign up! </Link></p>
                             </section>
                         </section>
                     </section>
-                    <p className='text-primary text-sm font-thin mt-2'>alert(`Currently logging in as ${currentUser?.email} `)</p>
                     <ToastContainer
                         position="bottom-right"
                         autoClose={2000}
@@ -139,9 +150,8 @@ function SignUp() {
                     />
                 </main >
             }
-
         </section>
     )
 }
 
-export default SignUp
+export default Login

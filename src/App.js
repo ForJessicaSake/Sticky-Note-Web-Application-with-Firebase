@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createContext } from 'react';
 import UseFetch from './components/UseFetch';
-import Home from './components/Home'
-import Create from './components/Create'
-import NoteList from './components/NoteList';
-import Login from './components/Login';
-import NotesDetails from './components/NotesDetails';
+import Home from './Pages/Home'
+import Create from './Pages/Create'
+import NoteList from './Pages/NoteList';
+import Login from './Pages/Login';
+import NotesDetails from './Pages/NotesDetails';
 import './index.css'
-import SignUp from './components/SignUp';
+import SignUp from './Pages/SignUp';
 
 export const stateContext = createContext();
 
