@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 import { UseAuth } from '../components/Firebase'
 import { ImUserCheck } from 'react-icons/im'
 import { FaEdit, } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,8 +15,8 @@ function NoteList() {
 
     return (
         <main className='container flex m-6 text-secondary'>
-        
-            <Sidebar text="Add Note" url="/create"/>
+
+            <Sidebar text="Add Note" url="/create" />
 
             <section className="container-two flex flex-col align-center">
                 <div className='flex justify-between'>
@@ -36,14 +37,18 @@ function NoteList() {
 
                     </header>
                     <section className=' grid grid-cols-3 place-content-center gap-6'>
-                        {loading && <Feed/>}
+                        {loading && <Feed />}
                         {data.map((notes) => (
                             <div className="first-of-type:bg-Yellow last-of-type:bg-Yellow odd:bg-blue even:bg-slate-50 mt-6 rounded-3xl w-72 h-72" key={notes.id}>
                                 <section className=" p-8 text-sm tracking-wide">
-                                    <h3 className='flex justify-between items-center align-middle font-semibold text-md'>{notes.title}<span className='text-secondary font-bold'><FaEdit /></span></h3>
-                                    <p className='text-xs mt-8'>{notes.body}</p>
+                                    <Link to={`/note/${notes.id}`}>
+                                        <h3 className='flex justify-between items-center align-middle font-semibold text-md'>{notes.title}<span className='text-secondary font-bold'><FaEdit /></span></h3>
+                                        <p className='text-xs mt-8'>{notes.body}</p>
+                                    </Link>
+
                                 </section>
                             </div>
+
                         ))}
                     </section>
                 </section>
