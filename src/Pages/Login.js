@@ -1,11 +1,11 @@
 import { useRef, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { logIn } from './Firebase'
+import { logIn } from '../components/Firebase'
 import { stateContext } from '../App';
 import Slider from 'react-slick'
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
-import Loading from './Loading/Loading'
+import Loading from '../components/Loading/Loading'
 import first from "../Images/first.png"
 import second from "../Images/second.png"
 import third from "../Images/third.png"

@@ -1,11 +1,11 @@
 import { useRef, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { stateContext } from '../App';
-import { signUp, UseAuth } from './Firebase'
+import { signUp, UseAuth } from '../components/Firebase'
 import Slider from 'react-slick'
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
-import Loading from './Loading/Loading'
+import Loading from '../components/Loading/Loading'
 import first from "../Images/first.png"
 import second from "../Images/second.png"
 import third from "../Images/third.png"
@@ -14,11 +14,21 @@ import "slick-carousel/slick/slick-theme.css"
 
 function SignUp() {
 
+//storing the initialized  hook to a variable
+
     const navigate = useNavigate();
+
+ //retreiving the global variables from the context hook
+
     const { loading, setLoading } = useContext(stateContext)
-    const emailRef = useRef()
+
+//initializing the refs
+   const emailRef = useRef()
+
     const passwordRef = useRef();
     const currentUser = UseAuth()
+
+//declaring the signup functionality
 
     const handleSignUp = async () => {
         setLoading(true)
@@ -63,6 +73,8 @@ function SignUp() {
         }
         setLoading(false)
     }
+
+    //react slick settings 
 
     const settings = {
         slidesToShow: 1,
