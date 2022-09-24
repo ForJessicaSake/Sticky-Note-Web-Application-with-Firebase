@@ -4,6 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { doc, getDoc, deleteDoc, setDoc } from "firebase/firestore";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../components/Firebase";
+import Sidebar from "../components/Sidebar";
+import { motion } from 'framer-motion';
 
 function NotesDetails() {
   //creating a state for the getdoc functionality
@@ -68,27 +70,24 @@ function NotesDetails() {
   return (
     <>
       <section>
-        <header>
-          <aside className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <button
-              className="inline-flex items-center bg-white text-black border-2 border-black py-1 px-6 focus:outline-none rounded text-base mt-4 md:mt-0"
-              onClick={handleEdit}
-            >
-              Edit{" "}
-            </button>
-            <button
-              className="inline-flex items-center bg-blue text-white border-0 py-1.5 px-6 focus:outline-none rounded text-base mt-4 lg:ml-4 ml-2 md:mt-0"
-              onClick={handleDelete}
-            >
-              {" "}
-              Delete{" "}
-            </button>
-          </aside>
-        </header>
-        <main>
-          <h2>{note.title}</h2>
-          <p>{note.body}</p>
-        </main>
+        <section className="container-two lg:flex lg:flex-row flex-col lg:px-12 px-4">
+          <Sidebar text="Add Note" url="/create" />
+          <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 my-12">
+            <article className="container px-5 text-left py-2 mx-auto">
+              <summary className="flex flex-col w-full mb-10">
+                <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-0 text-purple text-xl sm:text-2xl">{note.title}</p>
+                <br />
+                <p className="lg:w-2/3 lg:mx-8 mx-auto leading-relaxed text-base">{note.body}</p>
+                <br />
+                <div className="flex flex-wrap lg:mx-8 mx-0 flex-row mt-6">
+                  <button onClick={handleEdit} className="text-purple py-1 px-4 focus:outline-none border-2 border-purple hover:bg-indigo-600 hover:border-0 hover:outline-none hover:text-white rounded text-base">Edit{" "}</button>
+                  <motion.button onClick={handleDelete} whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgba(99 102 241)" }} className="ml-4 text-purple py-1 px-4 focus:outline-none rounded text-base">{" "} Delete{" "}</motion.button>
+                </div>
+              </summary>
+            </article>
+          </main>
+        </section>
+
         <ToastContainer
           position="bottom-right"
           autoClose={2000}
