@@ -2,7 +2,7 @@
 
 ## About The Project 
 
-Dockett is a note-taking web application designed for just anyone with busy schedules. This app helps users to take down short notes with ease, helping them stay organized at all times. 
+Dockett is a note taking web application designed for just anyone with busy schedules. This app helps users to take down short notes with ease, helping them stay organized at all times. 
 
 ## Technologies 
 - React.js
