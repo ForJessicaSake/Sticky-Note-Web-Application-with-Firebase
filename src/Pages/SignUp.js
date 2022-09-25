@@ -160,7 +160,7 @@ function SignUp() {
                                 Sign up
                             </button>
                             <section className="flex justify-center pt-36 align-middle">
-                                    <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg">
+                                    <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg mb-2">
                                     Already have an account?{" "}
                                     <Link className="text-purple ml-2" to="/login">
                                         {" "}

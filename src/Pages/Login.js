@@ -133,7 +133,7 @@ function Login() {
                             <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-4 xxs:text-lg xxs:h-24 xms:text-xl xms:h-24'>Login</button>
 
                             <section className="flex justify-center pt-36 align-middle">
-                                <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg">Don't have an account yet, <Link className='text-purple ml-2' to='/signup'> sign up! </Link></p>
+                                <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg mb-2">Don't have an account yet, <Link className='text-purple ml-2' to='/signup'> sign up! </Link></p>
                             </section>
                         </section>
                     </section>
