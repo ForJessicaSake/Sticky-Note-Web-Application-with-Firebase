@@ -17,23 +17,23 @@ function NoteList() {
   return (
     <main className="container flex m-6 text-secondary">
       <section className="container-two flex flex-col align-center">
-        <div className="flex justify-between w-96">
-          <Link to='/note'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-16 lgs:ml-16 smm:ml-16 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm xxs:ml-2'>Dockett</h1> </Link>
-          <h1 className="text-xl font-bold mb-10 ml-6 xxs:hidden">My Notes</h1>
-          <p className="text-secondary text-xs w-72 flex justify-between">
+        <div className="flex justify-between w-wt">
+          <Link to='/'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-2 lgs:ml-16 smm:ml-16 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm xxs:ml-2 smm:ml-2'>Dockett</h1> </Link>
+          <h1 className="text-xl font-bold mb-10 ml-6 xxs:hidden xms:hidden smm:hidden">My Notes</h1>
+          <p className="text-secondary text-xs w-72 smm:w-96 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
            <span className="text-lg mr-12"> <ImUserCheck/></span>
           </p>
         </div>
 
         <section className="bg-primary flex flex-col rounded-2xl p-2">
-          <h1 className="text-md font-bold">Recent Folders</h1>
+          <h1 className="text-md smm:text-2xl xms:text-xl font-bold">Recent Folders</h1>
 
           <header className="flex justify-between mt-6  text-sm">
-            <p> What are we writing today?</p>
+            <p className="xms:text-lg smm:text-lg"> What are we writing today?</p>
           </header>
 
-          <section className=" grid grid-cols-3 place-content-center gap-6 xxs:flex xxs:flex-col">
+          <section className=" grid grid-cols-3 place-content-center gap-6 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 ">
             {loading && <Feed />}
             {data.map((notes) => (
               <div
