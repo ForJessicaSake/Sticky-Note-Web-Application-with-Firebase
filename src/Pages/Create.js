@@ -41,9 +41,9 @@ function Create() {
     <main className="container flex m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
 
-      <form className="container-two flex flex-col ml-12 sm:ml-16" onSubmit={handleAdd}>
+      <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>
         <input
-          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 sm:w-96 md:w-96 lg:w-w xxs:w-80"
+          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 smm:w-96 lgs:w-w xxs:w-56"
           type="text"
           placeholder="heading"
           maxLength="15"
@@ -53,7 +53,7 @@ function Create() {
           }}
         />
         <textarea
-          className="border-2 w-w h-h mr-2 mt-16 sm:w-96 md:w-96 lg:w-w xxs:w-80"
+          className="border-2 w-w h-h mr-2 mt-16 smm:w-96 lgs:w-w xxs:w-56 xxs:h-72"
           type="text"
           maxLength="200"
           value={body}
