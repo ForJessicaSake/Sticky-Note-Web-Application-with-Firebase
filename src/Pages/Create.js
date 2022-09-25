@@ -41,9 +41,9 @@ function Create() {
     <main className="container flex m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
 
-      <form className="container-two flex flex-col ml-10" onSubmit={handleAdd}>
+      <form className="container-two flex flex-col ml-12 sm:ml-16" onSubmit={handleAdd}>
         <input
-          className="border-2 w-w h-8 text-sm rounded-xl p-4"
+          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 sm:w-96 md:w-96 lg:w-w xxs:w-80"
           type="text"
           placeholder="heading"
           maxLength="15"
@@ -53,7 +53,7 @@ function Create() {
           }}
         />
         <textarea
-          className="border-2 w-w h-h mt-16"
+          className="border-2 w-w h-h mr-2 mt-16 sm:w-96 md:w-96 lg:w-w xxs:w-80"
           type="text"
           maxLength="200"
           value={body}
@@ -62,7 +62,7 @@ function Create() {
           }}
         ></textarea>
 
-        <button className=" bg-blue text-white w-56 mt-8 rounded-md items-center h-12">
+        <button className=" bg-blue text-white w-56 mt-8 rounded-md items-center h-12 sm:w-96 md:w-96 text-lg">
           Add Sticky Note
         </button>
       </form>
