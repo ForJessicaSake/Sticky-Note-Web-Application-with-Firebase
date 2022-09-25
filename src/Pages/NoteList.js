@@ -16,11 +16,14 @@ function NoteList() {
 
   return (
     <main className="container flex m-6 text-secondary">
+      <section>
+        <Sidebar text="Add Note" url="/create" />
+      </section>
+
       <section className="container-two flex flex-col align-center">
-        <div className="flex justify-between w-96 xms:w-wt lgs:w-w">
-          <Link to='/'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-2 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm xxs:ml-2 smm:ml-2 lgs:ml-2'>Dockett</h1> </Link>
-          <h1 className="text-xl font-bold mb-10 ml-6 xxs:hidden xms:hidden smm:hidden lgs:hidden">My Notes</h1>
-          <p className="text-secondary text-xs w-72 smm:w-96 lgs:w-96 xms:w-96 flex justify-between smm:text-sm">
+        <div className="flex justify-between w-w xms:w-wt lgs:w-w">
+          <h1 className="text-xl font-bold mb-10 ml-2 xxs:hidden xms:hidden smm:hidden lgs:hidden">My Notes</h1>
+          <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
            <span className="text-lg mr-12"> <ImUserCheck/></span>
           </p>
@@ -33,7 +36,7 @@ function NoteList() {
             <p className="xms:text-lg lgs:text-xl smm:text-lg"> What are we writing today?</p>
           </header>
 
-          <section className=" grid grid-cols-3 place-content-center gap-6 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 ">
+          <section className=" grid grid-cols-3 place-content-center gap-6 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
             {loading && <Feed />}
             {data.map((notes) => (
               <div
@@ -56,6 +59,7 @@ function NoteList() {
           </section>
         </section>
       </section>
+
     </main>
   );
 }

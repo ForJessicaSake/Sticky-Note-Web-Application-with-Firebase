@@ -39,11 +39,8 @@ function Create() {
 
   return (
 
-    <main className="container flex flex-col m-8 text-secondary">
-      {/* <Sidebar text="Note List" url="/note" /> */}
-
-      <Link to='/note'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-16 lgs:ml-16 smm:ml-16 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm xxs:ml-4'>Dockett</h1> </Link>
-
+    <main className="container flex  m-8 text-secondary">
+      <Sidebar text="Note List" url="/note" />
 
       <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>
         <input

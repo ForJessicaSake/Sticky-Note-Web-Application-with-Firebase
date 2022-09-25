@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { FaBars } from "react-icons/fa";
+// import { FaBars } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 
 
-const buttonVariants = {
-  hover: {
-    scale: 1.1,
-    boxShadow: "0px 0px 6px #6c56c2",
-  }
-}
+// const buttonVariants = {
+//   hover: {
+//     scale: 1.1,
+//     boxShadow: "0px 0px 6px #6c56c2",
+//   }
+// }
 
 function Navbar() {
-  const [toggle, setToggle] = useState(false);
-  const handleToggle = () => {
-    setToggle(!toggle);
-  }
+  // const [toggle, setToggle] = useState(false);
+  // const handleToggle = () => {
+  //   setToggle(!toggle);
+  // }
 
 
   return (
