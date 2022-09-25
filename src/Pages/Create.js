@@ -38,7 +38,6 @@ function Create() {
   };
 
   return (
-
     <main className="container flex  m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
 
