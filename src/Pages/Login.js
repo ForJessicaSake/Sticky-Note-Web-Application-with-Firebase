@@ -86,25 +86,25 @@ function Login() {
     return (
         <section>
             {loading ? <Loading /> :
-                <main className='login-wrapper grid grid-cols-2 w-screen smm:flex smm:flex-col  lgs:flex lgs:flex-col xxs:flex xxs:flex-col xms:flex xms:flex-col overflow-x-hidden'>
+                <main className='login-wrapper grid grid-cols-2 w-screen smm:flex smm:flex-col  lgs:flex lgs:flex-col xxs:flex xxs:flex-col xms:flex xms:flex-col overflow-x-hidden '>
                     <section>
                         <Slider {...settings} className="bg-purple flex items-center justify-center h-screen">
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80  smm:ml-60 xxs:ml-4 xms:ml-36'>
-                                <img src={first} alt="notes" className='w-96' />
-                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-3xl xxs:w-80 xxs:text-3xl xms:w-80'>New Scheduling Options And Management Options.</figcaption>
+                                <img src={first} alt="notes" className='w-96 xxs:w-80 xms:w-80' />
+                                <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80'>New Scheduling Options And Management Options.</figcaption>
                                 <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10 xxs:text-sm xms:text-sm sm:text-sm sm:w-72'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p>
                             </figure>
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80 smm:ml-60 xxs:ml-2 xms:ml-36' >
                                 <img src={second} alt="notes" className='w-96' />
-                                <figcaption className='text-2xl font-semibold text-primary  text-center w-72 ml-14 mt-24 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-3xl xxs:ml-2 xxs:w-80 xxs:text-3xl xms:w-80'>Change The Quality Of Your Life.</figcaption>
+                                <figcaption className='text-2xl font-semibold text-primary  text-center w-72 ml-14 mt-24 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:ml-2 xxs:w-80 xxs:text-2xl xms:w-80'>Change The Quality Of Your Life.</figcaption>
                                 <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-12 xxs:text-sm xms:text-sm sm:text-sm sm:w-72 lgs:w-96 lg:text-sm'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times. </p>
                             </figure>
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80  smm:ml-60 xxs:ml-2 xms:ml-36'>
                                 <img src={third} alt="notes" className='w-96' />
-                                <figcaption className='text-2xl font-semibold text-primary  text-center w-72 ml-6 mt-28  xms:text-2xl xxs:w-80 xxs:text-3xl xms:w-80 sm:text-3xl sm:w-80 lgs:text-3xl lgs:w-96'>Your Safety And Security Is Priortized.</figcaption>
+                                <figcaption className='text-2xl font-semibold text-primary  text-center w-72 ml-6 mt-28  xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80 sm:text-3xl sm:w-80 lgs:text-3xl lgs:w-96'>Your Safety And Security Is Priortized.</figcaption>
                                 <p className='text-xs mt-4 font-thin text-primary text-center w-64 leading-2 tracking-wider ml-10  xxs:text-sm xms:text-sm sm:text-sm sm:w-72'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p>
                             </figure>
                         </Slider>

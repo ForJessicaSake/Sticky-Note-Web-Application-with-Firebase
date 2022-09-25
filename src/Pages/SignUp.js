@@ -98,7 +98,7 @@ function SignUp() {
                             className="bg-purple flex items-center justify-center h-screen "
                         >
                             <figure className="flex items-center justify-center align-middle ml-32 lgs:ml-80 smm:ml-60 xxs:ml-2 xms:ml-36">
-                                <img src={first} alt="notes" className="w-96" />
+                                <img src={first} alt="notes" className="w-96 xxs:w-80 xms:w-80" />
                                 <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-3xl xxs:w-80 xxs:text-3xl xms:w-80">
                                     New Scheduling Options And Management Options
                                 </figcaption>
@@ -110,7 +110,7 @@ function SignUp() {
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80 smm:ml-60 xxs:ml-2 xms:ml-36'>
                                 <img src={second} alt="notes" className="w-96" />
-                                <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-3xl xxs:w-80 xxs:text-3xl xms:w-80">
+                                <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80">
                                     Change The Quality Of Your Life.
                                 </figcaption>
                                 <p className="text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10 xxs:text-sm xms:text-sm sm:text-sm sm:w-72">
@@ -121,7 +121,7 @@ function SignUp() {
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80 smm:ml-60 xxs:ml-2 xms:ml-36'>
                                 <img src={third} alt="notes" className="w-96" />
-                                <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-3xl xxs:w-80 xxs:text-3xl xms:w-80">
+                                <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80">
                                     Your Safety And Security Is Priortized.
                                 </figcaption>
                                 <p className="text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10 xxs:text-sm xms:text-sm sm:text-sm sm:w-72">
