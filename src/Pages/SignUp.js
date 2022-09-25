@@ -109,7 +109,7 @@ function SignUp() {
                             </figure>
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80 smm:ml-60 xxs:ml-2 xms:ml-36'>
-                                <img src={second} alt="notes" className="w-96" />
+                                <img src={second} alt="notes" className="w-96 xxs:w-72 xms:80" />
                                 <figcaption className="text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80">
                                     Change The Quality Of Your Life.
                                 </figcaption>
@@ -155,7 +155,7 @@ function SignUp() {
                             ></input>
                             <button
                                 onClick={handleSignUp}
-                                    className="border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-lg xxs:h-20 xms:text-xl xms:h-20"
+                                    className="border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-lg xxs:h-24 xms:text-xl xms:h-24"
                             >
                                 Sign up
                             </button>

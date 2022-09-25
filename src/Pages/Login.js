@@ -91,7 +91,7 @@ function Login() {
                         <Slider {...settings} className="bg-purple flex items-center justify-center h-screen">
 
                             <figure className='flex items-center justify-center align-middle ml-32 lgs:ml-80  smm:ml-60 xxs:ml-4 xms:ml-36'>
-                                <img src={first} alt="notes" className='w-96 xxs:w-80 xms:w-80' />
+                                <img src={first} alt="notes" className='w-96 xxs:w-72 xms:w-80' />
                                 <figcaption className='text-2xl font-semibold text-primary text-center w-80 ml-2 mt-28 lgs:text-3xl lgs:w-96 sm:text-2xl sm:w-80 xms:text-2xl xxs:w-80 xxs:text-2xl xms:w-80'>New Scheduling Options And Management Options.</figcaption>
                                 <p className='text-xs font-thin text-primary text-center w-64 leading-2 mt-4 tracking-wider ml-10 xxs:text-sm xms:text-sm sm:text-sm sm:w-72'>Dockett offers a seamless service that allows users to easily take notes and stay organized at all times.</p>
                             </figure>
@@ -130,7 +130,7 @@ function Login() {
                                 ref={passwordRef}
                                 minLength='6'
                             ></input>
-                            <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-4 xxs:text-lg xxs:h-20 xms:text-xl xms:h-20'>Login</button>
+                            <button onClick={handleLogin} className='border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-4 xxs:text-lg xxs:h-24 xms:text-xl xms:h-24'>Login</button>
 
                             <section className="flex justify-center pt-36 align-middle">
                                 <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg">Don't have an account yet, <Link className='text-purple ml-2' to='/signup'> sign up! </Link></p>
