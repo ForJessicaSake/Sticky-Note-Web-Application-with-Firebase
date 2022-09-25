@@ -17,7 +17,7 @@ function NoteList() {
   return (
     <main className="container flex m-6 text-secondary">
       <section className="container-two flex flex-col align-center">
-        <div className="flex justify-between w-wt lgs:w-w">
+        <div className="flex justify-between w-96 xms:w-wt lgs:w-w">
           <Link to='/'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-2 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm xxs:ml-2 smm:ml-2 lgs:ml-2'>Dockett</h1> </Link>
           <h1 className="text-xl font-bold mb-10 ml-6 xxs:hidden xms:hidden smm:hidden lgs:hidden">My Notes</h1>
           <p className="text-secondary text-xs w-72 smm:w-96 lgs:w-96 xms:w-96 flex justify-between smm:text-sm">
