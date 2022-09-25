@@ -155,7 +155,7 @@ function SignUp() {
                             ></input>
                             <button
                                 onClick={handleSignUp}
-                                    className="border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-sm xxs:h-16 xms:text-xl xms:h-16"
+                                    className="border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-lg xxs:h-16 xms:text-xl xms:h-16"
                             >
                                 Sign up
                             </button>
