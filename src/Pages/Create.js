@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -41,13 +41,13 @@ function Create() {
 
     <main className="container flex flex-col m-8 text-secondary">
       {/* <Sidebar text="Note List" url="/note" /> */}
-                  
-      <h1 className='text-lg font-bold text-blue mb-8 ml-4 xms:ml-16 smm:text-lg xms:text-sm xxs:text-sm'>Dockett</h1>
+
+      <Link to='/'><h1 className='text-lg font-bold text-blue mb-8 ml-16 xms:ml-16 lgs:ml-16 smm:ml-16 smm:text-xl lgs:text-2xl xms:text-lg xxs:text-sm'>Dockett</h1> </Link>
 
 
       <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>
         <input
-          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 xms:w-96 smm:w-72 lgs:w-w xxs:w-64"
+          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
           type="text"
           placeholder="heading"
           maxLength="15"
@@ -57,7 +57,7 @@ function Create() {
           }}
         />
         <textarea
-          className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-72 lgs:w-w xxs:w-64 xxs:h-96"
+          className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
           type="text"
           maxLength="200"
           value={body}
