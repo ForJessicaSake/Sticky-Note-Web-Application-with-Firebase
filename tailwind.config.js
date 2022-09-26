@@ -22,9 +22,13 @@ module.exports = {
             width: {
                 w: "48rem",
                 wt: "40rem",
+                wtt: "100rem",
+
             },
             height: {
                 h: "26rem",
+                ht: "46rem",
+                htt: "80rem",
             },
             screens: {
                 xxs: {

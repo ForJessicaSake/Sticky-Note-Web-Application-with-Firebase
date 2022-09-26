@@ -20,7 +20,8 @@ function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
 
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault()
         setLoading(true)
         try {
             await logIn(emailRef.current.value, passwordRef.current.value)
@@ -29,7 +30,7 @@ function Login() {
         catch (err) {
             if (err.code === "auth/wrong-password") {
                 toast.info('Invalid Password', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -39,7 +40,7 @@ function Login() {
                 });
             } else if (err.code === "auth/user-not-found") {
                 toast.info('User does not exist', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -49,7 +50,7 @@ function Login() {
                 });
             } else if (err.code === "auth/user-disabled") {
                 toast.info('Account disabled', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -138,7 +139,7 @@ function Login() {
                         </section>
                     </section>
                     <ToastContainer
-                        position="bottom-right"
+                        position="top-right"
                         autoClose={2000}
                         hideProgressBar={false}
                         newestOnTop={false}

@@ -72,6 +72,7 @@ function NotesDetails() {
       <section>
         <section className="container-two lg:flex lg:flex-row flex-col lg:px-12 px-4">
           <Sidebar text="Add Note" url="/create" />
+          <h1 className='hidden text-md font-bold text-blue mb-16 smm:text-2xl xxs:block xms:block smm:block xxs:text-sm'>Dockett</h1>
           <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 my-12">
             <article className="container px-5 text-left py-2 mx-auto">
               <summary className="flex flex-col w-full mb-10">
