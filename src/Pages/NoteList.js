@@ -21,7 +21,7 @@ function NoteList() {
       </section>
 
       <section className="container-two flex flex-col align-center">
-        <div className="flex justify-between w-w xms:w-wt lgs:w-w">
+        <div className="flex justify-between xxs:w-full xms:w-wt lgs:w-w">
           <Link to='/'> <h1 className='text-md font-bold text-blue mb-16 smm:text-2xl hidden xxs:block smm:block xms:block xxs:text-sm'>Dockett</h1></Link>
           <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
@@ -29,7 +29,7 @@ function NoteList() {
           </p>
         </div>
 
-        <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14">
+        <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14 xxs:mt-0 xms:mt-0">
           <h1 className="text-md lgs:text-2xl smm:text-2xl xms:text-xl font-bold">Recent Folders</h1>
 
           <header className="flex justify-between mt-6  text-sm">
