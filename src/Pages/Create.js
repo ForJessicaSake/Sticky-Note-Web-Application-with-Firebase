@@ -5,6 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../components/Sidebar";
 import db from "../components/Firebase";
+import { motion } from 'framer-motion'
+
 
 function Create() {
   //creating two states to keep track of the user's input
@@ -63,9 +65,9 @@ function Create() {
           }}
         ></textarea>
 
-        <button className=" bg-blue text-white w-56 mt-8 rounded-md items-center h-12 sm:w-96 md:w-96 text-lg">
+        <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgba(99 102 241)" }}  className="hover:bg-Pink hover:border-0 hover:outline-none hover:text-white  bg-blue text-white w-56 mt-8 rounded-md items-center h-12 sm:w-96 md:w-96 text-lg">
           Add Sticky Note
-        </button>
+        </motion.button>
       </form>
       <ToastContainer
         position="bottom-right"
