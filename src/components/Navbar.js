@@ -1,44 +1,55 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { FaBars } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import {Link} from "react-router-dom";
+import {useState} from 'react'
 
+function Navbar(){
 
+    const [toggle, setToggle] = useState(false)
 
-const buttonVariants = {
-  hover: {
-    scale: 1.1,
-    boxShadow: "0px 0px 6px #6c56c2",
-  }
-}
+    const handleToggle =()=>{
+        setToggle(!toggle)
+    }
 
-function Navbar() {
-  const [toggle, setToggle] = useState(false);
-  const handleToggle = () => {
-    setToggle(!toggle);
-  }
+    return(
+<nav id="header" className="w-full z-30 py-1 bg-white shadow-lg border-b border-blue-400">
 
+      <div className="w-full flex items-center justify-between mt-0 px-6 py-2">
+         <label htmlFor="menu-toggle" className="cursor-pointer md:hidden block" onClick ={handleToggle}>
+            <svg className="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+               <title>menu</title>
+               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+         </label>
+         <input className="hidden" type="checkbox" id="menu-toggle"/> 
 
-  return (
-    <>
-      <header>
-        <div className="container mx-auto flex flex-wrap px-5 py-5 lg:px-12 flex-col md:flex-row items-center">
-          <p className="flex font-semibold items-center text-gray-900 mb-4 md:mb-0">
-            <span className="ml-3 text-2xl text-purple">Dockett</span>
-          </p>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link to="/" className="mr-5 cursor-pointer hover:text-blue">Home</Link>
-            <Link to="/note" className="mr-5 cursor-pointer hover:text-blue">Notes</Link>
-            <Link to="/create" className="mr-5 cursor-pointer hover:text-blue">Create</Link>
-          </nav>
-          <Link to="/signup"><motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgb(55 65 81)" }}  className="inline-flex items-center bg-white border-2 border-black py-1 px-5 focus:outline-none rounded-full text-base mt-4 md:mt-0">Sign Up</motion.button></Link>
-          <Link to="/login"><motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px #6cb5de" }} className="inline-flex items-center bg-blue text-white border-0 py-2 px-6 focus:outline-none rounded-full text-base mt-4 lg:ml-4 ml-0 md:mt-0" >Log In</motion.button></Link>
-        </div>
-      </header>
-
-
-    </>
-  )
+      {toggle ? <div className=" absolute top-16 flex h-htt xxs:w-11/12 w-11/12 justify-center bg-black text-white font-bold ">
+            <nav>
+               <ul className= " flex flex-col h-96 mt-16 mb-10 items-center md:flex w-96 justify-between text-base text-blue-600 pt-4 md:pt-0">
+               <li><Link to ='/'>Home</Link></li> 
+                  <li><Link to ='/create'>Create</Link></li> 
+                 <li><Link to ='/note'>Note</Link></li> 
+               </ul>
+            </nav>
+         </div> : <div className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1">
+            <nav>
+               <ul className= "md:flex items-center w-96 justify-between text-base text-blue-600 pt-4 md:pt-0">
+               <li><Link to ='/'>Home</Link></li> 
+                  <li><Link to ='/create'>Create</Link></li> 
+                 <li><Link to ='/note'>Note</Link></li> 
+               </ul>
+            </nav>
+         </div>}   
+        
+         
+         <div className="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+            <div className="auth flex items-center w-full md:w-full">
+               <button className="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700"><Link to='/login'>Log In</Link></button>
+               <button className="bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100"><Link to='/login'>Sign Up</Link></button>
+            </div>
+         </div>
+      </div>
+    </nav>
+    
+    )
 }
 
 export default Navbar

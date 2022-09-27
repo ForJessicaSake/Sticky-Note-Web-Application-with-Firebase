@@ -16,29 +16,27 @@ function NoteList() {
 
   return (
     <main className="container flex m-6 text-secondary">
-      <Sidebar text="Add Note" url="/create" />
+      <section>
+        <Sidebar text="Add Note" url="/create" />
+      </section>
 
       <section className="container-two flex flex-col align-center">
-        <div className="flex justify-between">
-          <h1 className="text-xl font-bold mb-10 ml-6">My Notes</h1>
-          <input
-            type="search"
-            className="w-96 border-2 border-gray-50 bg-primary h-2 p-4 rounded-2xl text-sm"
-            placeholder="Search"
-          />
-          <p className="text-secondary text-xs w-48 flex justify-around">
+        <div className="flex justify-between xxs:w-full xms:w-wt lgs:w-w">
+          <Link to='/'> <h1 className='text-md hidden font-bold text-blue mb-16 smm:text-2xl  md:hidden xxs:block xms:block xxs:text-sm'>Dockett</h1></Link>
+          <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt xxs:w-72 xxs:ml-10 lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
-            <ImUserCheck />
+           <span className="text-lg mr-12"> <ImUserCheck/></span>
           </p>
         </div>
 
-        <section className="bg-primary flex flex-col rounded-2xl p-6">
-          <h1 className="text-md font-bold">Recent Folders</h1>
+        <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14 xxs:mt-0 xms:mt-0">
+          <h1 className="text-md lgs:text-xl smm:text-xl xms:text-xl font-bold">Recent Folders</h1>
 
-          <header className="flex justify-between mt-6 w-3/12 text-sm">
-            <p> What are we writing today?</p>
+          <header className="flex justify-between mt-6  text-sm">
+            <p className="xms:text-md lgs:text-md smm:text-sm"> What are we writing today?</p>
           </header>
-          <section className=" grid grid-cols-3 place-content-center gap-6">
+
+          <section className=" grid grid-cols-3 place-content-center xms:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
             {loading && <Feed />}
             {data.map((notes) => (
               <div
@@ -61,6 +59,7 @@ function NoteList() {
           </section>
         </section>
       </section>
+
     </main>
   );
 }

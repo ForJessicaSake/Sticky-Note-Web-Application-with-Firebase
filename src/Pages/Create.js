@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -38,12 +38,13 @@ function Create() {
   };
 
   return (
-    <main className="container flex m-8 text-secondary">
+    <section>
+      <Link to='/'> <h1 className='text-md font-bold text-blue mt-4 mb-5 ml-20 xms:ml-24 xxs:ml-14 smm:text-2xl hidden xxs:block xms:block xxs:text-lg'>Dockett</h1></Link>
+    <main className="container flex  m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
-
-      <form className="container-two flex flex-col ml-10" onSubmit={handleAdd}>
+      <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>
         <input
-          className="border-2 w-w h-8 text-sm rounded-xl p-4"
+          className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
           type="text"
           placeholder="heading"
           maxLength="15"
@@ -53,7 +54,7 @@ function Create() {
           }}
         />
         <textarea
-          className="border-2 w-w h-h mt-16"
+          className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
           type="text"
           maxLength="200"
           value={body}
@@ -62,7 +63,7 @@ function Create() {
           }}
         ></textarea>
 
-        <button className=" bg-blue text-white w-56 mt-8 rounded-md items-center h-12">
+        <button className=" bg-blue text-white w-56 mt-8 rounded-md items-center h-12 sm:w-96 md:w-96 text-lg">
           Add Sticky Note
         </button>
       </form>
@@ -78,6 +79,7 @@ function Create() {
         pauseOnHover
       />
     </main>
+    </section>
   );
 }
 

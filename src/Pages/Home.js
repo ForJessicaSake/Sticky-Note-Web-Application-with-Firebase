@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
 import pic from "../Images/fourth.png";
 import { FaVideo } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
 
 
 function Home() {
@@ -15,11 +15,9 @@ function Home() {
 
     return (
         <>
-            <Navbar />
-
-            {/* Hero section */}
+        <Navbar/>
             <section>
-                <article className="container mx-auto flex px-5 py-12 lg:py-20 lg:px-5 items-center justify-center flex-col mt-4">
+                <article className="container mx-auto flex px-5 py-12 lg:py-20 lg:px-5 items-center justify-center flex-col">
                     <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg text-base p-2 rounded-full">Secure Task Management for Teams</p>
                     <section className="text-center lg:w-2/4 w-full">
                         <h1 className="font-semibold text-gray-800 sm:text-4xl text-3xl mb-4 mt-2 leading-10">Take note the simple way for free <span className="bg-purple text-white sm:text-3xl p-1 text-2xl"> forever.</span></h1>

@@ -21,11 +21,36 @@ module.exports = {
 
             width: {
                 w: "48rem",
+                wt: "40rem",
+                wit: "33rem",
+                wtt: "100rem",
+
             },
             height: {
                 h: "26rem",
+                ht: "46rem",
+                htt: "80rem",
+            },
+            screens: {
+                xxs: {
+                    min: "250px",
+                    max: "480px",
+                },
+                xms: {
+                    min: "481px",
+                    max: "767px",
+                },
+                smm: {
+                    min: "768px",
+                    max: "900px",
+                },
+                lgs: {
+                    min: "901px",
+                    max: "1100px",
+                },
             },
         },
         plugins: [],
     },
 };
+9
