@@ -19,7 +19,15 @@ function Home() {
     return (
         <>
         <Navbar/>
-            <section>
+            <section  data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
                 <article className="container mx-auto flex xxs:px-0 py-12 smm:px-12 lgs:px-8 lg:py-20 lg:px-2 items-center justify-center flex-col">
                     <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg xxs:p-2 xxs:text-xs xms:p-2 smm:p-4 lgs:p-2 lg:p-2 rounded-full">Secure Task Management for Teams</p>
                     <section className="text-center lg:w-2/4 w-full">
