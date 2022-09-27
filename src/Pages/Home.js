@@ -38,28 +38,28 @@ function Home() {
 
                         <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #ff7191"}} className="flex rounded-lg h-full p-8 flex-col bg-Pink">
-                                <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4">Ongoing project</h2>
+                                <h2 className="lg:text-2xl text-xl text-white  font-bold w-full sm:w-1/4">Ongoing project</h2>
                                 <aside className="flex items-center mb-3 mt-8">
                                     <mark className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-white text-white flex-shrink-0">
-                                        <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
+                                        <img className="animate-spin w-6 h-6 rounded-full" src={pic} alt="notes" />
                                     </mark>
-                                    <figure className="bg-gray-300 rounded-full px-12 py-2"></figure>
+                                    <figure className=" animate-pulse bg-gray-300 rounded-full px-12 py-2"></figure>
                                 </aside>
                                 <aside className="flex items-center mt-4">
-                                    <figure className="bg-gray-200 rounded-full p-2 mr-2 "></figure><p className="leading-relaxed lg:text-xl text-lg">New Brand</p>
+                                    <figure className="animate-pulse bg-gray-200 rounded-full p-2 mr-2 "></figure><p className="leading-relaxed lg:text-xl text-lg text-white ">New Brand</p>
                                 </aside>
                                 <aside className="flex items-center mt-2">
-                                    <figure className="bg-gray-200 rounded-full p-2 mr-2 "></figure><p className="leading-relaxed lg:text-xl text-lg">Product Launch</p>
+                                    <figure className="animate-pulse bg-gray-200 rounded-full p-2 mr-2 "></figure><p className="leading-relaxed lg:text-xl text-lg text-white ">Product Launch</p>
                                 </aside>
 
                                 <aside className="flex mt-4 mb-4">
-                                    <figure className="bg-gray-300 rounded-full p-3 px-16 py-2"></figure>
-                                    <figure className="bg-gray-300 rounded-full p-3 px-10 py-2 ml-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-2 px-16 py-2"></figure>
+                                    <figure className="animate-pulse bg-gray-300 rounded-full p-2 px-10 py-2 ml-2"></figure>
                                 </aside>
                                 <aside className="flex">
-                                    <figure className="bg-gray-300 rounded-full p-3 px-8 py-2"></figure>
-                                    <figure className="bg-gray-300 rounded-full p-3 px-10 py-2 ml-2"></figure>
-                                    <figure className="bg-gray-300 rounded-full p-3 px-10 py-2 ml-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-2 px-8 py-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-2 px-10 py-2 ml-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-2 px-10 py-0 ml-2"></figure>
                                 </aside>
                             </motion.article>
                         </section>
@@ -67,26 +67,26 @@ function Home() {
 
                         <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-72 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #fdbf11"}} className="flex rounded-lg h-full p-8 flex-col bg-yellow">
-                                <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4 mb-3">Daily Activity</h2>
+                                <h2 className="lg:text-2xl text-xl text-white font-bold w-full sm:w-1/4 mb-3">Daily Activity</h2>
                                 <aside className="flex items-center mb-3 mt-4">
-                                    <figure className="bg-gray-200 rounded-full p-3"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-3"></figure>
+                                    <figure className="bg-gray-100 rounded-full p-3 px-12 py-2 ml-2"></figure>
+                                </aside>
+                                <aside className="flex items-center mb-3 mt-2">
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-3"></figure>
                                     <figure className="bg-gray-200 rounded-full p-3 px-12 py-2 ml-2"></figure>
                                 </aside>
                                 <aside className="flex items-center mb-3 mt-2">
                                     <figure className="bg-gray-200 rounded-full p-3"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-3 px-12 py-2 ml-2"></figure>
+                                </aside>
+                                <aside className="flex items-center mb-3 mt-2">
+                                    <figure className="border-2 border-gray-100 rounded-full p-3"></figure>
                                     <figure className="bg-gray-200 rounded-full p-3 px-12 py-2 ml-2"></figure>
                                 </aside>
                                 <aside className="flex items-center mb-3 mt-2">
-                                    <figure className="bg-gray-200 rounded-full p-3"></figure>
-                                    <figure className="bg-gray-200 rounded-full p-3 px-12 py-2 ml-2"></figure>
-                                </aside>
-                                <aside className="flex items-center mb-3 mt-2">
-                                    <figure className="border-2 border-gray-300 rounded-full p-3"></figure>
-                                    <figure className="bg-gray-200 rounded-full p-3 px-12 py-2 ml-2"></figure>
-                                </aside>
-                                <aside className="flex items-center mb-3 mt-2">
-                                    <figure className="border-2 border-gray-300 rounded-full p-3"></figure>
-                                    <figure className="bg-gray-200 rounded-full p-3 px-12 py-2 ml-2"></figure>
+                                    <figure className="border-2 border-gray-200 rounded-full p-3"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full p-3 px-12 py-2 ml-2"></figure>
                                 </aside>
                             </motion.article>
                         </section>
@@ -94,24 +94,24 @@ function Home() {
 
                         <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #6c56c2"}} className="flex rounded-lg h-full p-8 flex-col bg-purple">
-                                <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4">Live Conversation</h2>
+                                <h2 className="lg:text-2xl text-xl text-white font-bold w-full sm:w-1/4">Live Conversation</h2>
                                 <aside className="flex items-center mb-3 mt-8">
-                                    <figure className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
+                                    <figure className="animate-pulse w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
+                                        <img className="animate-pulse w-6 h-6 rounded-full" src={pic} alt="notes" />
                                     </figure>
-                                    <figure className="bg-gray-300 rounded-full px-12 py-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full px-12 py-2"></figure>
                                 </aside>
                                 <aside className="flex items-center mb-3 mt-8 justify-end">
                                     <figure className="bg-gray-300 rounded-full mr-3 px-12 py-2"></figure>
                                     <figure className="w-9 h-9 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
+                                        <img className=" animate-spin w-6 h-6 rounded-full" src={pic} alt="notes" />
                                     </figure>
                                 </aside>
                                 <aside className="flex items-center mb-3 mt-8">
                                     <figure className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-gray-200 text-white flex-shrink-0">
-                                        <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
+                                        <img className="animate-pulse n w-6 h-6 rounded-full" src={pic} alt="notes" />
                                     </figure>
-                                    <figure className="bg-gray-300 rounded-full px-12 py-2"></figure>
+                                    <figure className="animate-pulse bg-gray-100 rounded-full px-12 py-2"></figure>
                                 </aside>
                             </motion.article>
                         </section>
@@ -125,7 +125,7 @@ function Home() {
 
             {/* Statistics section */}
             <section className="body-font">
-                <section className="container xxs:px-0 smm:px-12 px-0 lg:px-4 xlgs:px-12 py-24 mx-auto">
+                <section className="container xxs:px-0 smm:px-12 px-0 lg:px-4 xlgs:px-12 py-12 mx-auto">
                         <article className="flex flex-wrap -m-4 text-center">
                         {statistics.map((statistic) => (
                             <aside className="lg:p-4 xxs:px-0 xxs:py-4 xms:py-4 sm:w-1/4 w-1/2">
@@ -153,10 +153,11 @@ function Home() {
                             </aside>
                         </article>
 
-                        <article className="xxs:px-0 lg:w-1/3 w-full">
-                            <aside className="flex rounded-lg h-full xxs:px-4 smm:px-8 xms:px-8 lgs:px-6 lg:px-4 py-6 flex-col bg-amber-100">
-                                <h2 className="text-2xl font-bold text-amber-300">Manage Projects</h2>
 
+
+                        <article className="p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full">
+                            <aside className="flex rounded-lg h-full xxs:px-2 xms:px-4 smm:px-4 lg:px-4 lgs:px-4 xlgs:px-4 py-8 flex-col bg-blue">
+                                <h2 className="text-2xl font-bold text-amber-300">Manage Notes</h2>
                                 <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                     <section>
@@ -173,7 +174,7 @@ function Home() {
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
-                                    <figure className="p-5 rounded bg-white"></figure>
+                                    <figure className="animate-pulse p-5 rounded bg-white"></figure>
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
 
@@ -183,13 +184,13 @@ function Home() {
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
-                                    <figure className="p-5 rounded bg-white"></figure>
+                                    <figure className="animate-pulse p-5 rounded bg-white"></figure>
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
                                     <figure className="p-5 rounded bg-white"></figure>
-                                    <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
+                                    <figure className="animate-pulse bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
                             </aside>
                         </article>
