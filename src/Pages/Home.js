@@ -155,9 +155,9 @@ function Home() {
 
                         <article className="p-4 lg:w-1/3 w-full">
                             <aside className="flex rounded-lg h-full p-8 flex-col bg-blue">
-                                <h2 className="text-2xl font-bold text-amber-300">Manage Projects</h2>
+                                <h2 className="text-2xl font-bold text-amber-300">Manage Notes</h2>
 
-                                <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
+                                <aside className="flex items-center mb-3 mt-8 justify-end">
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                     <section>
                                         <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
@@ -173,7 +173,7 @@ function Home() {
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
-                                    <figure className="p-5 rounded bg-white"></figure>
+                                    <figure className="animate-pulse p-5 rounded bg-white"></figure>
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
 
@@ -183,13 +183,13 @@ function Home() {
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
-                                    <figure className="p-5 rounded bg-white"></figure>
+                                    <figure className="animate-pulse p-5 rounded bg-white"></figure>
                                     <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
 
                                 <aside className="flex items-center mb-2 p-2">
                                     <figure className="p-5 rounded bg-white"></figure>
-                                    <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
+                                    <figure className="animate-pulse bg-white rounded px-10 py-2 ml-3"></figure>
                                 </aside>
                             </aside>
                         </article>
