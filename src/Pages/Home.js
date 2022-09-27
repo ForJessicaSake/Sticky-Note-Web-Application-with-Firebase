@@ -154,7 +154,7 @@ function Home() {
                         </article>
 
                         <article className="p-4 lg:w-1/3 w-full">
-                            <aside className="flex rounded-lg h-full p-8 flex-col bg-amber-100">
+                            <aside className="flex rounded-lg h-full p-8 flex-col bg-blue">
                                 <h2 className="text-2xl font-bold text-amber-300">Manage Projects</h2>
 
                                 <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
