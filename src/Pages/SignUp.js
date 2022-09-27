@@ -39,7 +39,7 @@ function SignUp() {
         catch (err) {
             if (err.code === "auth/weak-password") {
                 toast.info('Weak password!', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -50,7 +50,7 @@ function SignUp() {
 
             } else if (err.code === "auth/email-already-in-use") {
                 toast.info('Email already in use, kindly log in', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -60,7 +60,7 @@ function SignUp() {
                 });
             } else {
                 toast.info('Network error, kindly check your internet connection', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -174,7 +174,7 @@ function SignUp() {
                         alert(`Currently logging in as ${currentUser?.email} `)
                     </p>
                     <ToastContainer
-                        position="bottom-right"
+                        position="top-right"
                         autoClose={2000}
                         hideProgressBar={false}
                         newestOnTop={false}
