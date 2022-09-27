@@ -48,9 +48,12 @@ module.exports = {
                     min: "901px",
                     max: "1100px",
                 },
+                xlgs: {
+                    min: "1279px",
+                    max: "1282px",
+                },
             },
         },
         plugins: [],
     },
 };
-9

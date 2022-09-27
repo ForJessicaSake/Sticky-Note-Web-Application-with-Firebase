@@ -17,14 +17,14 @@ function Home() {
         <>
         <Navbar/>
             <section>
-                <article className="container mx-auto flex px-5 py-12 lg:py-20 lg:px-5 items-center justify-center flex-col">
-                    <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg text-base p-2 rounded-full">Secure Task Management for Teams</p>
+                <article className="container mx-auto flex xxs:px-0 py-12 smm:px-12 lgs:px-8 lg:py-20 lg:px-2 items-center justify-center flex-col">
+                    <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg xxs:p-2 xxs:text-xs xms:p-2 smm:p-4 lgs:p-2 lg:p-2 rounded-full">Secure Task Management for Teams</p>
                     <section className="text-center lg:w-2/4 w-full">
-                        <h1 className="font-semibold text-gray-800 sm:text-4xl text-3xl mb-4 mt-2 leading-10">Take note the simple way for free <span className="bg-purple text-white sm:text-3xl p-1 text-2xl"> forever.</span></h1>
+                        <h1 className="font-semibold text-gray-800 sm:text-4xl xxs:text-2xl mb-4 mt-2 leading-10">Take note the simple way for free <span className="bg-purple text-white sm:text-3xl p-1 text-2xl"> forever.</span></h1>
                         <p className="mb-8 text-gray-800 leading-relaxed text-left">Dockett is a note-taking app designed for professionals with busy schedules and basically anyone at all to take down notes with ease. You get to store all your notes and important information digitally in a cloud-based storage system.</p>
                         <aside className="flex justify-center">
-                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px #6cb5de" }} className="inline-flex text-white bg-blue border-0 py-2 px-6 focus:outline-none rounded-full lg:text-lg text-base">Register</motion.button>
-                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgb(55 65 81)" }} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none rounded-full lg:text-lg text-base"><FaVideo className="lg:mr-2 lg:mt-1 mr-1 mt-1" />Watch Video</motion.button>
+                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px #6cb5de" }} className="inline-flex text-white bg-blue border-0 py-2 xxs:px-4 xxs:text-sm xms:px-4 smm:px-8 smm:text-lg lgs:px-8 lgs:py-4 smm:py-4 lg:px-6 focus:outline-none rounded-full lg:text-lg">Register</motion.button>
+                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgb(55 65 81)" }} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 xxs:px-4 xxs:text-sm xms:px-4 smm:px-8 smm:text-lg lgs:px-8 lgs:py-4 smm:py-4 lg:px-6 focus:outline-none rounded-full lg:text-lg"><FaVideo className="lg:mr-2 lg:mt-1 mr-1 mt-1" />Watch Video</motion.button>
                         </aside>
                     </section>
                 </article>
@@ -33,10 +33,10 @@ function Home() {
 
             {/* Boxes section */}
             <section>
-                <section className="container px-5 lg:px-2 py-24 mx-auto">
+                <section className="container xxs:px-0 smm:px-14 xms:px-2 lgs:px-0 lg:px-2 py-24 mx-auto">
                     <figure className="flex flex-wrap justify-center lg:w-full -m-4">
 
-                        <section className="p-4 md:w-80 w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #ff7191"}} className="flex rounded-lg h-full p-8 flex-col bg-Pink">
                                 <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4">Ongoing project</h2>
                                 <aside className="flex items-center mb-3 mt-8">
@@ -65,7 +65,7 @@ function Home() {
                         </section>
 
 
-                        <section className="p-4 md:w-72 w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-72 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #fdbf11"}} className="flex rounded-lg h-full p-8 flex-col bg-yellow">
                                 <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4 mb-3">Daily Activity</h2>
                                 <aside className="flex items-center mb-3 mt-4">
@@ -92,7 +92,7 @@ function Home() {
                         </section>
 
 
-                        <section className="p-4 md:w-80 w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #6c56c2"}} className="flex rounded-lg h-full p-8 flex-col bg-purple">
                                 <h2 className="lg:text-2xl text-xl font-bold w-full sm:w-1/4">Live Conversation</h2>
                                 <aside className="flex items-center mb-3 mt-8">
@@ -125,12 +125,12 @@ function Home() {
 
             {/* Statistics section */}
             <section className="body-font">
-                <section className="container px-4 lg:px-4 py-24 mx-auto">
+                <section className="container xxs:px-0 smm:px-12 px-0 lg:px-4 xlgs:px-12 py-24 mx-auto">
                         <article className="flex flex-wrap -m-4 text-center">
                         {statistics.map((statistic) => (
-                            <aside className="p-4 sm:w-1/4 w-1/2">
+                            <aside className="lg:p-4 xxs:px-0 xxs:py-4 xms:py-4 sm:w-1/4 w-1/2">
                                 <h2 className="font-semibold sm:text-2xl text-xl text-gray-900">{statistic.top}</h2>
-                                <p className="leading-relaxed">{statistic.extra}</p>
+                                <p className="leading-relaxed xxs:text-sm">{statistic.extra}</p>
                             </aside>
                             
                             ))}
@@ -141,20 +141,20 @@ function Home() {
 
 
             {/* Projects section */}
-            <section className="text-gray-600">
-                <section className="container px-5 lg:px-2 lg:py-24 py-4 mx-auto">
+            <section>
+                <section className="container xxs:px-0 smm:px-12 lgs:px-12 lg:px-4 xlgs:px-20 py-12 mx-auto">
                     <article className="flex flex-wrap -m-4">
 
-                        <article className="p-8 lg:w-1/3">
-                            <aside className="h-full px-8 pt-16 pb-24 rounded-lg text-center relative">
-                                <h2 className="text-sm text-Pink font-medium mb-3 bg-fuchsia-100 rounded-full lg:p-1 p-2">Management with Dockett</h2>
-                                <h1 className="sm:text-2xl text-xl font-semibold text-gray-900 mb-3 text-left">An App That Works.</h1>
+                        <article className="xxs:px-0 lg:w-1/3">
+                            <aside className="h-full px-8 pt-16 pb-24 xxs:px-0 xms:px-4 smm:px-4 rounded-lg relative">
+                                <span className="text-sm text-Pink font-medium mb-4 smm:p-4 bg-fuchsia-100 text-left rounded-full lgs:p-4 lg:p-2 p-2">Management with Dockett</span>
+                                <h1 className="sm:text-2xl text-xl font-semibold text-gray-900 mt-6 mb-3 text-left">An App That Works.</h1>
                                 <p className="leading-relaxed w-full text-left text-sm">Dockett can help you be more organized and more productive. Designed and built to be functional and easily accessible by users, Dockett is also free to use.</p>
                             </aside>
                         </article>
 
-                        <article className="p-4 lg:w-1/3 w-full">
-                            <aside className="flex rounded-lg h-full p-8 flex-col bg-amber-100">
+                        <article className="xxs:px-0 lg:w-1/3 w-full">
+                            <aside className="flex rounded-lg h-full xxs:px-4 smm:px-8 xms:px-8 lgs:px-6 lg:px-4 py-6 flex-col bg-amber-100">
                                 <h2 className="text-2xl font-bold text-amber-300">Manage Projects</h2>
 
                                 <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
@@ -194,15 +194,15 @@ function Home() {
                             </aside>
                         </article>
 
-                        <article className="p-2 lg:w-1/3">
-                            <aside className="h-full bg-opacity-75 px-8 pt-8 pb-8 rounded-lg overflow-hidden text-center relative">
+                        <article className="xxs:px-0 lg:w-1/3">
+                            <aside className="h-full bg-opacity-75 xxs:px-0 xms:px-4 lg:px-12 xlgs:px-12 py-8 rounded-lg overflow-hidden text-center relative">
                                 <aside className="flex items-center mb-3 mt-4">
                                     <motion.figure animate={{boxShadow: "0px 0px 5px #ff7191"}} className="border-Pink border-2 rounded-full p-2"></motion.figure>
                                     <h2 className="text-xl font-semibold ml-2">Workforce</h2>
                                 </aside>
                                 <aside className="flex items-center mt-2 ml-8">
                                     <motion.figure animate={{boxShadow: "0px 0px 3px #ff7191"}} className="bg-Pink rounded-full p-1"></motion.figure>
-                                    <h2 className="text-sm ml-2">Track roles in companies</h2>
+                                    <h2 className="text-sm ml-2">Track company's roles</h2>
                                 </aside>
 
 
@@ -232,7 +232,7 @@ function Home() {
                                 </aside>
                                 <aside className="flex items-center mt-2 ml-8">
                                     <motion.figure animate={{boxShadow: "0px 0px 3px rgb(254 243 199)"}} className="bg-amber-100 rounded-full p-1"></motion.figure>
-                                    <h2 className="text-sm ml-2">Personal research notes.</h2>
+                                    <h2 className="text-sm ml-2">Research notes.</h2>
                                 </aside>
 
                             </aside>
