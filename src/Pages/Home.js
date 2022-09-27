@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import pic from "../Images/fourth.png";
-import { FaVideo } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import Navbar from '../components/Navbar';
-
+import React, { useState, useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import pic from '../Images/fourth.png'
+import { FaVideo } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+import Navbar from '../components/Navbar'
 
 function Home() {
     const [statistics, setStatistics] = useState([
@@ -12,7 +13,9 @@ function Home() {
         { top: "Editor's Choice", extra: 'IOS App Store' },
         { top: '4.7 Stars', extra: 'Google Play Store' },
     ])
-
+   useEffect(() => {
+    AOS.init()
+   })
     return (
         <>
         <Navbar/>
@@ -242,11 +245,9 @@ function Home() {
                     </article>
                 </section>
             </section>
-
         </>
 
     )
 }
 
 export default Home
-

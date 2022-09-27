@@ -6,11 +6,22 @@ import { ImUserCheck } from "react-icons/im";
 import { FaEdit } from "react-icons/fa";
 import Feed from "../components/Loading/Feed";
 import Sidebar from "../components/Sidebar";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function NoteList() {
   //importing the created context global variables
 
   const { data, loading } = useContext(stateContext);
+
+  
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+  } else {
+    // User is signed out
+  }
+});
 
   const currentUser = UseAuth();
 
