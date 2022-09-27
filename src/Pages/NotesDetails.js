@@ -54,6 +54,7 @@ function NotesDetails() {
     const data = setDoc(docRef, payload);
     
     setNote(data);
+    navigate('/note')
   };
 
   const handleEditComp =()=>{
