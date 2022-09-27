@@ -21,7 +21,7 @@ function Navbar(){
          </label>
          <input className="hidden" type="checkbox" id="menu-toggle"/> 
 
-      {toggle ? <div className=" absolute top-20 flex h-htt w-screen justify-center bg-black text-white font-bold border-2 ">
+      {toggle ? <div className=" absolute top-16 flex h-htt w-full justify-center bg-black text-white font-bold ">
             <nav>
                <ul className= " flex flex-col h-96 mt-16 mb-10 items-center md:flex w-96 justify-between text-base text-blue-600 pt-4 md:pt-0">
                <li><Link to ='/'>Home</Link></li> 
