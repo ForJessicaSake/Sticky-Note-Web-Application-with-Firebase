@@ -39,7 +39,7 @@ function Create() {
 
   return (
     <section>
-      <Link to='/'> <h1 className='text-md font-bold text-blue mb-5 ml-20 smm:text-2xl hidden xxs:block smm:block xms:block xxs:text-sm'>Dockett</h1></Link>
+      <Link to='/'> <h1 className='text-md font-bold text-blue mt-4 mb-5 ml-20 xms:ml-24 xxs:ml-14 smm:text-2xl hidden xxs:block xms:block xxs:text-lg'>Dockett</h1></Link>
     <main className="container flex  m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
       <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>

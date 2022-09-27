@@ -155,11 +155,11 @@ function SignUp() {
                             ></input>
                             <button
                                 onClick={handleSignUp}
-                                    className="border-purple bg-purple text-white w-96 mt-8 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-lg xxs:h-16 xms:text-xl xms:h-16"
+                                    className="border-purple bg-purple text-white w-96 mt-4 rounded-md items-center h-12 smm:text-2xl smm:h-14 xxs:w-80 xxs:ml-6 xxs:text-lg xxs:h-16 xms:text-xl xms:h-16"
                             >
                                 Sign up
                             </button>
-                            <section className="flex justify-center pt-36 align-middle">
+                            <section className="flex justify-center pt-12 align-middle">
                                     <p className="flex align-middle text-xs tracking-wide text mt-20 smm:text-2xl xxs:text-sm xms:text-lg lgs:text-lg mb-2">
                                     Already have an account?{" "}
                                     <Link className="text-purple ml-2" to="/login">

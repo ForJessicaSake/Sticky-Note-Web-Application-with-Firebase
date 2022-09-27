@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import pic from "../Images/fourth.png";
 import { FaVideo } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
 
     return (
         <>
+        <Navbar/>
             <section>
                 <article className="container mx-auto flex px-5 py-12 lg:py-20 lg:px-5 items-center justify-center flex-col">
                     <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg text-base p-2 rounded-full">Secure Task Management for Teams</p>
