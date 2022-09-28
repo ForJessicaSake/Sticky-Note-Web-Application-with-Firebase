@@ -20,6 +20,7 @@ function Home() {
         <>
         <Navbar/>
             <section>
+
                 <article className="container mx-auto flex xxs:px-0 py-12 smm:px-12 lgs:px-8 lg:py-20 lg:px-2 items-center justify-center flex-col">
                     <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg xxs:p-2 xxs:text-xs xms:p-2 smm:p-4 lgs:p-2 lg:p-2 rounded-full">Secure Task Management for Teams</p>
                     <section className="text-center lg:w-2/4 w-full">
@@ -129,7 +130,7 @@ function Home() {
             {/* Statistics section */}
             <section className="body-font">
                 <section className="container xxs:px-0 smm:px-12 px-0 lg:px-4 xlgs:px-12 py-12 mx-auto">
-                        <article className="flex flex-wrap -m-4 text-center">
+                        <article className="flex flex-wrap mt-6 mb-6 text-center animate-bounce">
                         {statistics.map((statistic) => (
                             <aside className="lg:p-4 xxs:px-0 xxs:py-4 xms:py-4 sm:w-1/4 w-1/2">
                                 <h2 className="font-semibold sm:text-2xl text-xl text-gray-900">{statistic.top}</h2>
@@ -160,17 +161,23 @@ function Home() {
 
                         <article className="p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full" data-aos="flip-up">
                             <aside className="flex rounded-lg h-full xxs:px-2 xms:px-4 smm:px-4 lg:px-4 lgs:px-4 xlgs:px-4 py-8 flex-col bg-blue">
+<<<<<<< HEAD
                                 <h2 className="text-2xl font-bold ml-2 text-amber-300">Manage Notes</h2>
                                 <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
                                     <figure className="animate-pulse bg-white rounded px-10 py-2 ml-3"></figure>
+=======
+                                <h2 className="text-2xl font-bold text-amber-300">Manage Notes</h2>
+                                <aside className="flex justify-between items-center mb-3 mt-8">
+                                    <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
+>>>>>>> a60887dc9275168d578e2b9545626115bc1b1716
                                     <section>
-                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
+                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full  text-white bg-amber-300">
                                             <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
                                         </figure>
-                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
+                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full  text-white bg-amber-300">
                                             <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
                                         </figure>
-                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
+                                        <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full  text-white bg-amber-300">
                                             <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
                                         </figure>
                                     </section>

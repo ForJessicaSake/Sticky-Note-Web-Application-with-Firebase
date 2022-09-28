@@ -47,14 +47,14 @@ onAuthStateChanged(auth, (user) => {
             <p className="xms:text-md lgs:text-md smm:text-sm"> What are we writing today?</p>
           </header>
 
-          <section className=" grid grid-cols-3 place-content-center xms:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
+          <section className="  grid grid-cols-3 place-content-center xms:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
             {loading && <Feed />}
             {data.map((notes) => (
               <div
-                className="first-of-type:bg-Yellow last-of-type:bg-Yellow odd:bg-blue even:bg-slate-50 mt-6 rounded-3xl w-72 h-72"
+                className="hover:bg-pink hover:border-0 hover:outline-none hover:text-white first-of-type:bg-Yellow last-of-type:bg-Yellow odd:bg-blue even:bg-slate-50 mt-6 rounded-3xl w-72 h-72"
                 key={notes.id}
               >
-                <section className=" p-8 text-sm tracking-wide">
+                <section className=" p-8 text-sm tracking-wide ">
                   <h3 className="flex justify-between items-center align-middle font-semibold text-md">
                     {notes.title}{" "}
                     <Link to={`/note/${notes.id}`}>
