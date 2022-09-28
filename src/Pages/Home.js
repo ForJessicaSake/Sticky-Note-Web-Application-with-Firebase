@@ -36,7 +36,7 @@ function Home() {
                 <section className="container xxs:px-0 smm:px-14 xms:px-2 lgs:px-0 lg:px-2 py-24 mx-auto">
                     <figure className="flex flex-wrap justify-center lg:w-full -m-4">
 
-                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full" data-aos="fade-up-right" data-aos-duration="2000">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #ff7191"}} className="flex rounded-lg h-full p-8 flex-col bg-Pink">
                                 <h2 className="lg:text-2xl text-xl text-white  font-bold w-full sm:w-1/4">Ongoing project</h2>
                                 <aside className="flex items-center mb-3 mt-8">
@@ -65,7 +65,7 @@ function Home() {
                         </section>
 
 
-                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-72 xxs:w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-72 xxs:w-full" data-aos="zoom-out" data-aos-duration="2000">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #fdbf11"}} className="flex rounded-lg h-full p-8 flex-col bg-yellow">
                                 <h2 className="lg:text-2xl text-xl text-white font-bold w-full sm:w-1/4 mb-3">Daily Activity</h2>
                                 <aside className="flex items-center mb-3 mt-4">
@@ -92,7 +92,7 @@ function Home() {
                         </section>
 
 
-                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full">
+                        <section className="px-0 py-4 lg:p-4 xms:px-2 smm:p-4 lgs:p-4 md:w-80 xxs:w-full" data-aos="fade-up-left" data-aos-duration="2000">
                             <motion.article whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px #6c56c2"}} className="flex rounded-lg h-full p-8 flex-col bg-purple">
                                 <h2 className="lg:text-2xl text-xl text-white font-bold w-full sm:w-1/4">Live Conversation</h2>
                                 <aside className="flex items-center mb-3 mt-8">
@@ -155,11 +155,11 @@ function Home() {
 
 
 
-                        <article className="p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full">
+                        <article className="p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full" data-aos="flip-up">
                             <aside className="flex rounded-lg h-full xxs:px-2 xms:px-4 smm:px-4 lg:px-4 lgs:px-4 xlgs:px-4 py-8 flex-col bg-blue">
-                                <h2 className="text-2xl font-bold text-amber-300">Manage Notes</h2>
+                                <h2 className="text-2xl font-bold ml-2 text-amber-300">Manage Notes</h2>
                                 <aside className="flex justify-between items-center mb-3 mt-8 justify-end">
-                                    <figure className="bg-white rounded px-10 py-2 ml-3"></figure>
+                                    <figure className="animate-pulse bg-white rounded px-10 py-2 ml-3"></figure>
                                     <section>
                                         <figure className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-white text-white bg-amber-300">
                                             <img className="w-6 h-6 rounded-full" src={pic} alt="notes" />
