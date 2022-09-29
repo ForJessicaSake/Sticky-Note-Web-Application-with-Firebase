@@ -44,14 +44,14 @@ onAuthStateChanged(auth, (user) => {
           </p>
         </div>
 
-        <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14 xxs:mt-4 xms:mt-4">
+        <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14 xxs:mt-4 xms:mt-4 ml-4">
           <h1 className="text-md lgs:text-xl smm:text-xl xms:text-xl font-bold">Recent Folders</h1>
 
           <header className="flex justify-between mt-6  text-sm">
             <p className="xms:text-md lgs:text-md smm:text-sm"> What are we writing today?</p>
           </header>
 
-          <section className="  grid grid-cols-3 place-content-center xms:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
+          <section className="  grid grid-cols-3 place-content-center xms:gap-4 xxs:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
             {loading && <Feed />}
             {data.map((notes) => (
               <div
