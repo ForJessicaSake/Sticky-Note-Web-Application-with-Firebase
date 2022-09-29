@@ -21,10 +21,10 @@ module.exports = {
 
             width: {
                 w: "48rem",
+                wz: "22rem",
                 wt: "40rem",
                 wit: "33rem",
                 wtt: "100rem",
-
             },
             height: {
                 h: "26rem",

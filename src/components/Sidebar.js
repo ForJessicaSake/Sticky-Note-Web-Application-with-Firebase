@@ -23,7 +23,7 @@ function Sidebar({ text, url }) {
     }
 
     return (
-        <section className='container-one pl-2  w-44 flex flex-col items-center xxs:hidden xms:hidden'>
+        <section className='container-one pl-2  w-44 flex flex-col items-center xxs:hidden xms:hidden mt-6'>
             <h1 className='text-md font-bold text-blue mb-16 smm:text-2xl  xxs:text-sm'>Dockett</h1>
             <Link to={url} className='flex text-sm items-center mb-14 smm:text-lg xxs:w-24 xxs:text-sm'><AiOutlineFileAdd /><span className='ml-2 font-bold'>{text}</span></Link>
             <section className='animate-bounce mb-12'>
