@@ -5,6 +5,8 @@ import { doc, getDoc, deleteDoc, setDoc } from "firebase/firestore";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../components/Firebase";
 import Sidebar from "../components/Sidebar";
+import Navbar from '../components/Navbar'
+
 import { motion } from "framer-motion";
 
 export const Editing = ({ title, body, setNote, handleEdit }) => {
@@ -127,15 +129,16 @@ function NotesDetails() {
         />
       ) : (
         <section>
-          <section className="container-two lg:flex lg:flex-row flex-col lg:px-12 mt-10">
+            <div className="hidden xxs:block xms:block xxs:w-screen w-screen">
+              <Navbar />
+            </div>
+          <section className="container-two lg:flex lg:px-12 smm:flex lgs:flex mt-6">
             <Sidebar text="Add Note" url="/create" />
-            <h1 className="hidden text-md font-bold text-blue mb-16 smm:text-2xl xxs:block xms:block smm:block xxs:text-sm">
-              Dockett
-            </h1>
-            <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 my-12">
+            
+            <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 smm:px-12 lgs:px-12 my-12">
               <article className="container px-5 text-left mx-auto">
                 <summary className="flex flex-col w-full mb-10">
-                  <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-0 text-purple text-xl sm:text-2xl">
+                  <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-2 text-purple text-xl sm:text-xl">
                     {note.title}
                   </p>
                   <br />

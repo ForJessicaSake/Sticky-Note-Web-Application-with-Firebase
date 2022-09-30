@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../components/Sidebar";
 import db from "../components/Firebase";
 import { motion } from 'framer-motion'
+import Navbar from '../components/Navbar'
 
 
 function Create() {
@@ -41,8 +42,10 @@ function Create() {
 
   return (
     <section>
-          <Link to='/'> <h1 className='text-md hidden font-bold mt-10 xxs:ml-14 xms:ml-24 ml-20 text-blue mb-10 smm:text-2xl  md:hidden xxs:block xms:block xxs:text-sm'>Dockett</h1></Link>
-    <main className="container flex  m-8 text-secondary">
+      <div className="hidden xxs:block xms:block xxs:w-screen w-screen">
+        <Navbar/>
+      </div>   
+       <main className="container flex  m-8 text-secondary">
       <Sidebar text="Note List" url="/note" />
       <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4" onSubmit={handleAdd}>
         <input
