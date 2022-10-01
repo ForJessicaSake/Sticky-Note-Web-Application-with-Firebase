@@ -22,12 +22,12 @@ function Home() {
             <section>
 
                 <article className="container mx-auto flex xxs:px-0 py-12 smm:px-12 lgs:px-8 lg:py-20 lg:px-2 items-center justify-center flex-col">
-                    <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg xxs:p-2 xxs:text-xs xms:p-2 smm:p-4 lgs:p-2 lg:p-2 rounded-full">Secure Task Management for Teams</p>
+                    <p className="mb-4 bg-fuchsia-100 text-Pink lg:text-lg xxs:p-2 xxs:text-xs xms:p-2 smm:p-4 lgs:p-2 lg:p-2 rounded-full">Secure Note Taking Application for You</p>
                     <section className="text-center lg:w-2/4 w-full">
                         <h1 className="font-semibold text-gray-800 sm:text-4xl xxs:text-2xl mb-4 mt-2 leading-10">Take note the simple way for free <span className="bg-purple text-white sm:text-3xl p-1 text-2xl"> forever.</span></h1>
                         <p className="mb-8 text-gray-800 leading-relaxed text-left">Dockett is a note-taking app designed for professionals with busy schedules and basically anyone at all to take down notes with ease. You get to store all your notes and important information digitally in a cloud-based storage system.</p>
                         <aside className="flex justify-center">
-                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px #6cb5de" }} className="inline-flex text-white bg-blue border-0 py-2 xxs:px-4 xxs:text-sm xms:px-4 smm:px-8 smm:text-lg lgs:px-8 lgs:py-4 smm:py-4 lg:px-6 focus:outline-none rounded-full lg:text-lg">Register</motion.button>
+                            <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px #6cb5de" }} className="inline-flex text-white bg-black  border-0 py-2 xxs:px-4 xxs:text-sm xms:px-4 smm:px-8 smm:text-lg lgs:px-8 lgs:py-4 smm:py-4 lg:px-6 focus:outline-none rounded-full lg:text-lg">Register</motion.button>
                             <motion.button whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgb(55 65 81)" }} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 xxs:px-4 xxs:text-sm xms:px-4 smm:px-8 smm:text-lg lgs:px-8 lgs:py-4 smm:py-4 lg:px-6 focus:outline-none rounded-full lg:text-lg"><FaVideo className="lg:mr-2 lg:mt-1 mr-1 mt-1" />Watch Video</motion.button>
                         </aside>
                     </section>

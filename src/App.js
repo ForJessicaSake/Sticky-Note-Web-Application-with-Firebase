@@ -31,6 +31,6 @@ function App() {
       </stateContext.Provider>
     </main>
   )
-} 
+}
 
 export default App

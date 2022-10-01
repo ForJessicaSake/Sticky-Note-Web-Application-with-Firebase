@@ -6,23 +6,12 @@ import { ImUserCheck } from "react-icons/im";
 import { FaEdit } from "react-icons/fa";
 import Feed from "../components/Loading/Feed";
 import Sidebar from "../components/Sidebar";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Navbar from '../components/Navbar'
+import Navbar from "../components/Navbar";
 
 function NoteList() {
   //importing the created context global variables
 
   const { data, loading } = useContext(stateContext);
-
-  
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    const uid = user.uid;
-  } else {
-    // User is signed out
-  }
-});
 
   const currentUser = UseAuth();
 
@@ -33,22 +22,35 @@ onAuthStateChanged(auth, (user) => {
       </section>
 
       <section className="container-two flex flex-col align-center">
-        <div className= "hidden xxs:block xms:block xxs:w-wz w-screen">
-          <Navbar className='w-full' />
-          </div>
+        <div className="hidden xxs:block xms:block xxs:w-wz w-screen">
+          <Navbar className="w-full" />
+        </div>
         <div className="justify-between xxs:w-full xms:w-wt lgs:w-w mt-6 xms:hidden xxs:hidden">
-          <Link to='/'> <h1 className='text-md hidden font-bold text-blue mb-16 smm:text-2xl  md:hidden xxs:block xms:block xxs:text-sm'>Dockett</h1></Link>
+          <Link to="/">
+            {" "}
+            <h1 className="text-md hidden font-bold text-blue mb-16 smm:text-2xl  md:hidden xxs:block xms:block xxs:text-sm">
+              Dockett
+            </h1>
+          </Link>
           <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt xxs:w-72 xxs:ml-10 lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
-           <span className="text-lg mr-12"> <ImUserCheck/></span>
+            <span className="text-lg mr-12">
+              {" "}
+              <ImUserCheck />
+            </span>
           </p>
         </div>
 
         <section className="bg-primary flex flex-col rounded-2xl p-2 mt-14 xxs:mt-4 xms:mt-4 ml-4">
-          <h1 className="text-md lgs:text-xl smm:text-xl xms:text-xl font-bold">Recent Folders</h1>
+          <h1 className="text-md lgs:text-xl smm:text-xl xms:text-xl font-bold">
+            Recent Folders
+          </h1>
 
           <header className="flex justify-between mt-6  text-sm">
-            <p className="xms:text-md lgs:text-md smm:text-sm"> What are we writing today?</p>
+            <p className="xms:text-md lgs:text-md smm:text-sm">
+              {" "}
+              What are we writing today?
+            </p>
           </header>
 
           <section className="  grid grid-cols-3 place-content-center xms:gap-4 xxs:gap-4 smm:gap-14 gap-20 xxs:flex xxs:flex-col xms:grid xms:grid-cols-2 smm:grid-cols-2 lgs:grid-cols-2 ">
@@ -74,7 +76,6 @@ onAuthStateChanged(auth, (user) => {
           </section>
         </section>
       </section>
-
     </main>
   );
 }

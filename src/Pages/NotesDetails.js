@@ -60,7 +60,9 @@ function NotesDetails() {
     const docRef = doc(db, "notes", id);
     const payload = { title: note.title, body: note.body };
 
-    const data = setDoc(docRef, payload);
+    const data = setDoc(docRef, payload, {
+      merge: true
+    });
 
     setNote(data);
     navigate("/note");
@@ -129,12 +131,12 @@ function NotesDetails() {
         />
       ) : (
         <section>
-            <div className="hidden xxs:block xms:block xxs:w-screen w-screen">
-              <Navbar />
-            </div>
+          <div className="hidden xxs:block xms:block xxs:w-screen w-screen">
+            <Navbar />
+          </div>
           <section className="container-two lg:flex  lg:px-12 mt-6">
             <Sidebar text="Add Note" url="/create" />
-            
+
             <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 my-12">
               <article className="container px-5 text-left mx-auto">
                 <summary className="flex flex-col w-full mb-10">

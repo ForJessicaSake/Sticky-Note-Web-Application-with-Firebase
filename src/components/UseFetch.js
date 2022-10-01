@@ -1,21 +1,26 @@
-import {useState, useEffect} from 'react'
-import db from './Firebase';
-import { onSnapshot, collection } from 'firebase/firestore'
+import { useState, useEffect } from "react";
+import db from "./Firebase";
+import { onSnapshot, collection } from "firebase/firestore";
+import { UseAuth } from "./Firebase";
 
 function UseFetch(collectionName) {
 
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const currentUser = UseAuth();
 
-    useEffect(() => {
-        onSnapshot(collection(db, collectionName), (snapshot) => {
-            setData(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-            setLoading(false)
-        })
-    }, [collectionName])
+  useEffect(() => {
+    onSnapshot(collection(db, collectionName), (snapshot) => {
+      setData(
+        snapshot.docs
+          .map((doc) => ({ ...doc.data(), id: doc.id }))
+          .filter((data) => data.uid === currentUser.uid)
+      );
+      setLoading(false);
+    });
+  }, [collectionName, currentUser]);
 
-
-  return {data, loading, setLoading} 
+  return { data, loading, setLoading };
 }
 
 export default UseFetch;

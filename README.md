@@ -19,6 +19,7 @@ Dockett is a note taking web application designed for just anyone with busy sche
 
 - Jessica Joseph
 - Juliet Ofoegbu
+- Usman Gurowa
 
 ## Roadmap 🔍
 Here are some of the links you should look out for to make navigation on the site smooth for you. 
@@ -31,7 +32,7 @@ Here are some of the links you should look out for to make navigation on the sit
 
 ## Duties of Contributors 
 
-- The Navigation - Juliet Ofoegbu
+- The Navigation - Jessica Joseph
 
 - The Sidebar - Jessica Joseph
 
@@ -41,9 +42,9 @@ Here are some of the links you should look out for to make navigation on the sit
 
 - Home Page - Juliet Ofoegbu
 
-- The Create Page - Jessica Joseph
+- The Create Page - Jessica Joseph & Usman Gurowa
 
-- The Note Page - Jessica Joseph
+- The Note Page - Usman Gurowa & Jessica Joseph
 
 - The NoteDetails Page - Juliet Ofoegbu & Jessica Joseph
 
