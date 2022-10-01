@@ -7,6 +7,7 @@ function UseFetch(collectionName) {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const currentUser = UseAuth();
 
   useEffect(() => {
@@ -14,7 +15,7 @@ function UseFetch(collectionName) {
       setData(
         snapshot.docs
           .map((doc) => ({ ...doc.data(), id: doc.id }))
-          .filter((data) => data.uid === currentUser.uid)
+          .filter((data) => data.uid === currentUser?.uid)
       );
       setLoading(false);
     });

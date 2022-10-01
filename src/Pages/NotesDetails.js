@@ -137,10 +137,10 @@ function NotesDetails() {
           <section className="container-two lg:flex  lg:px-12 mt-6">
             <Sidebar text="Add Note" url="/create" />
 
-            <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 my-12">
+       <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 smm:px-12 lgs:px-12 my-12">
               <article className="container px-5 text-left mx-auto">
                 <summary className="flex flex-col w-full mb-10">
-                  <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-0 text-purple text-xl sm:text-2xl">
+                  <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-2 text-purple text-xl sm:text-xl">
                     {note.title}
                   </p>
                   <br />
@@ -170,6 +170,7 @@ function NotesDetails() {
                 </summary>
               </article>
             </main>
+            
           </section>
           <ToastContainer
             position="bottom-right"
