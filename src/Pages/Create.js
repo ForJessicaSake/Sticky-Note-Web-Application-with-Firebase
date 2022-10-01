@@ -31,8 +31,8 @@ function Create() {
         body,
         time: serverTimestamp(),
         uid: currentUser.uid,
+        navigate("/note");
       };
-      navigate("/note");
       await addDoc(collectionRef, payload);
     } catch (err) {
       toast.info("Kindly log in", {
@@ -45,7 +45,6 @@ function Create() {
         progress: undefined,
       });
     }
-    navigate("/note");
   };
 
   return (

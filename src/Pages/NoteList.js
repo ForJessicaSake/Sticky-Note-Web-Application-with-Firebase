@@ -25,6 +25,7 @@ function NoteList() {
         <div className="hidden xxs:block xms:block xxs:w-wz w-screen">
           <Navbar className="w-full" />
         </div>
+
         <div className="justify-between xxs:w-full xms:w-wt lgs:w-w mt-6 xms:hidden xxs:hidden">
           <Link to="/">
             {" "}
@@ -32,6 +33,7 @@ function NoteList() {
               Dockett
             </h1>
           </Link>
+
           <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt xxs:w-72 xxs:ml-10 lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
             <span className="text-lg mr-12">
@@ -51,9 +53,9 @@ function NoteList() {
               {" "}
               What are we writing today?    
 
-             <Link to ='/create'>  
+             <Link to ='/create' className="hidden xxs:block xms:block">  
              <button
-                className="ml-2 animate-bounce text-blue py-1 px-4 focus:outline-none border bg-white border-white hover:bg-white hover:border-0 hover:outline-none hover:text-Pink rounded-lg text-base "
+                  className="ml-2 animate-bounce hidden xxs:block xms:block text-blue py-1 px-4 focus:outline-none border bg-white border-white hover:bg-white hover:border-0 hover:outline-none hover:text-Pink rounded-lg text-base "
               >
                 Add Note
               </button>
