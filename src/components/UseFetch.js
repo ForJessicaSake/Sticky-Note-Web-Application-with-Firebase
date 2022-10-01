@@ -6,11 +6,12 @@ import { UseAuth } from "./Firebase";
 function UseFetch(collectionName) {
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const currentUser = UseAuth();
 
   useEffect(() => {
+    setLoading(true)
     onSnapshot(collection(db, collectionName), (snapshot) => {
       setData(
         snapshot.docs

@@ -22,12 +22,14 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        setLoading(true)
         try {
+            setLoading(true)
             await logIn(emailRef.current.value, passwordRef.current.value)
             navigate('/note')
+            setLoading(false)
         }
         catch (err) {
+            setLoading(true)
             if (err.code === "auth/wrong-password") {
                 toast.info('Invalid Password', {
                     position: "top-right",

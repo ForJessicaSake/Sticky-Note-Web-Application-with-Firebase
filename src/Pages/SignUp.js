@@ -33,10 +33,13 @@ function SignUp() {
     const handleSignUp = async () => {
         setLoading(true)
         try {
+            setLoading(true)
             await signUp(emailRef.current.value, passwordRef.current.value)
             navigate('/login')
+            setLoading(false)
         }
         catch (err) {
+            setLoading(true)
             if (err.code === "auth/weak-password") {
                 toast.info('Weak password!', {
                     position: "top-right",
@@ -71,7 +74,6 @@ function SignUp() {
             }
             setLoading(false)
         }
-        setLoading(false)
     }
 
     //react slick settings 
