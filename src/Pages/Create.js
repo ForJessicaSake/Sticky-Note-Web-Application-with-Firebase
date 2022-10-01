@@ -71,7 +71,7 @@ function Create() {
           <textarea
             className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
             type="text"
-            maxLength="200"
+            maxLength="210"
             value={body}
             onChange={(e) => {
               setBody(e.target.value);
