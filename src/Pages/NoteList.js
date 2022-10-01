@@ -49,7 +49,16 @@ function NoteList() {
           <header className="flex justify-between mt-6  text-sm">
             <p className="xms:text-md lgs:text-md smm:text-sm">
               {" "}
-              What are we writing today?
+              What are we writing today?    
+
+             <Link to ='/create'>  
+             <button
+                className="ml-2 animate-bounce text-blue py-1 px-4 focus:outline-none border bg-white border-white hover:bg-white hover:border-0 hover:outline-none hover:text-Pink rounded-lg text-base "
+              >
+                Add Note
+              </button>
+              </Link>
+              
             </p>
           </header>
 
