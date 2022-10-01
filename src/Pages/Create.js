@@ -31,9 +31,9 @@ function Create() {
         body,
         time: serverTimestamp(),
         uid: currentUser.uid,
-        navigate("/note");
       };
       await addDoc(collectionRef, payload);
+      navigate("/note");
     } catch (err) {
       toast.info("Kindly log in", {
         position: "bottom-right",
@@ -71,7 +71,7 @@ function Create() {
           <textarea
             className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
             type="text"
-            maxLength="210"
+            maxLength="200"
             value={body}
             onChange={(e) => {
               setBody(e.target.value);
