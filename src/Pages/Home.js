@@ -167,7 +167,7 @@ function Home() {
 
 
 
-                        <article className="lg:p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full" data-aos="flip-up" data-aos-duration="1000">
+                        <article className="lg:p-4 lg:w-1/3 xxs:px-0 smm:px-0 lgs:px-2 w-full">
                             <aside className="flex rounded-lg h-full xxs:px-2 xms:px-4 smm:px-4 lg:px-4 lgs:px-4 xlgs:px-4 py-8 flex-col bg-blue">
                                 <h2 className="text-2xl font-bold ml-2 text-amber-300">Manage Notes</h2>
                                 <aside className="flex justify-between items-center mb-3 mt-8">
