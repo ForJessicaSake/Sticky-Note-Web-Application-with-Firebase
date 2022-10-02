@@ -31,7 +31,6 @@ function SignUp() {
     //declaring the signup functionality
 
     const handleSignUp = async () => {
-        setLoading(true)
         try {
             setLoading(true)
             await signUp(emailRef.current.value, passwordRef.current.value)
@@ -39,7 +38,7 @@ function SignUp() {
             setLoading(false)
         }
         catch (err) {
-            setLoading(true)
+            setLoading(false)
             if (err.code === "auth/weak-password") {
                 toast.info('Weak password!', {
                     position: "top-right",
@@ -175,19 +174,19 @@ function SignUp() {
                     <p className="text-primary text-sm font-thin mt-2">
                         alert(`Currently logging in as ${currentUser?.email} `)
                     </p>
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={2000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                    />
                 </main>
             )}
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </section>
     );
 }

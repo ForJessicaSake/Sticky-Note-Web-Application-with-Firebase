@@ -7,7 +7,6 @@ import Sidebar from "../components/Sidebar";
 import db from "../components/Firebase";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-
 import { UseAuth } from "../components/Firebase";
 
 function Create() {
@@ -36,7 +35,7 @@ function Create() {
       navigate("/note");
     } catch (err) {
       toast.info("Kindly log in", {
-        position: "bottom-right",
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -44,8 +43,9 @@ function Create() {
         draggable: true,
         progress: undefined,
       });
-    }
-  };
+  }
+ }
+
 
   return (
     <section>
@@ -88,18 +88,18 @@ function Create() {
             Add Sticky Note
           </motion.button>
         </form>
-        <ToastContainer
-          position="bottom-right"
-          autoClose={2000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
       </main>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </section>
   );
 }

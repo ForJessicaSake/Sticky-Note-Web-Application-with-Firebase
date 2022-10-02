@@ -22,7 +22,7 @@ function UseFetch(collectionName) {
     });
   }, [collectionName, currentUser]);
 
-  return { data, loading, setLoading };
+  return { data, loading, setLoading, currentUser };
 }
 
 export default UseFetch;

@@ -8,16 +8,17 @@ import Login from './Pages/Login';
 import NotesDetails from './Pages/NotesDetails';
 import './index.css'
 import SignUp from './Pages/SignUp';
+import NotFound from './Pages/NotFound'
 
 export const stateContext = createContext();
 
 function App() {
 
-  const { data, loading, setLoading } = UseFetch("notes");
+  const { data, loading, setLoading, currentUser } = UseFetch("notes");
 
   return (
     <main className="font-font text-secondary">
-      <stateContext.Provider value={{ data, loading, setLoading }}>
+      <stateContext.Provider value={{ data, loading, setLoading, currentUser }}>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,6 +27,7 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/note/" element={<NoteList />} />
             <Route path="/note/:id" element={<NotesDetails />} />
+            <Route path ="*" element ={<NotFound/>}/>
           </Routes>
         </Router>
       </stateContext.Provider>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { stateContext } from "../App";
-import { Link } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { UseAuth } from "../components/Firebase";
 import { ImUserCheck } from "react-icons/im";
 import { FaEdit } from "react-icons/fa";
@@ -8,15 +8,15 @@ import Feed from "../components/Loading/Feed";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
+
+
 function NoteList() {
   //importing the created context global variables
-
   const { data, loading } = useContext(stateContext);
-
   const currentUser = UseAuth();
 
   return (
-    <main className="container flex m-4 text-secondary">
+    <main className="container flex m-4 text-secondary">  
       <section>
         <Sidebar text="Add Note" url="/create" />
       </section>
@@ -86,7 +86,7 @@ function NoteList() {
             ))}
           </section>
         </section>
-      </section>
+      </section>  
     </main>
   );
 }

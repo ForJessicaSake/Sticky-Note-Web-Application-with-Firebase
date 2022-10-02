@@ -29,7 +29,7 @@ function Login() {
             setLoading(false)
         }
         catch (err) {
-            setLoading(true)
+            setLoading(false)
             if (err.code === "auth/wrong-password") {
                 toast.info('Invalid Password', {
                     position: "top-right",
@@ -62,7 +62,7 @@ function Login() {
                 });
             } else {
                 toast.info('Network error, kindly check your internet connection', {
-                    position: "bottom-right",
+                    position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -73,8 +73,6 @@ function Login() {
             }
             setLoading(false)
         }
-        setLoading(false)
-
     }
 
     const settings = {
@@ -140,19 +138,19 @@ function Login() {
                             </section>
                         </section>
                     </section>
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={2000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                    />
                 </main >
             }
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </section>
     )
 }
