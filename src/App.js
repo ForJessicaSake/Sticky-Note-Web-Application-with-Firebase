@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { createContext } from 'react';
 import UseFetch from './components/UseFetch';
 import Home from './Pages/Home'
@@ -8,7 +8,6 @@ import Login from './Pages/Login';
 import NotesDetails from './Pages/NotesDetails';
 import './index.css'
 import SignUp from './Pages/SignUp';
-import NotFound from './Pages/NotFound'
 
 export const stateContext = createContext();
 
@@ -27,7 +26,12 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/note/" element={<NoteList />} />
             <Route path="/note/:id" element={<NotesDetails />} />
-            <Route path ="*" element ={<NotFound/>}/>
+            <Route path="*" element={
+            <section className='flex justify-center items-center text-black font-bold'>
+              <h1 className=''>Sorry, this page cannot be found</h1>
+              <p>Kindly return back to the <Link>HomePage...</Link></p>
+              </section>
+            }/>
           </Routes>
         </Router>
       </stateContext.Provider>
