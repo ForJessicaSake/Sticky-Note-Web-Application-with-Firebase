@@ -25,7 +25,7 @@ function Login() {
         try {
             setLoading(true)
             await logIn(emailRef.current.value, passwordRef.current.value)
-            navigate('/note')
+            navigate('/note', {replace:true})
             setLoading(false)
         }
         catch (err) {
