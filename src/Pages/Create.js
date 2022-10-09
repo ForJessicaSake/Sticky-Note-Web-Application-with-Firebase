@@ -21,6 +21,7 @@ function Create() {
 
   const navigate = useNavigate();
 
+  //the add functionality
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
