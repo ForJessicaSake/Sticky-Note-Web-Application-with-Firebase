@@ -14,9 +14,13 @@ import "slick-carousel/slick/slick-theme.css"
 
 
 function Login() {
-
+//initializing the useNavigate hook
     const navigate = useNavigate()
+    
+    //importing global declared variables
     const { loading, setLoading } = useContext(stateContext)
+    
+  //initializing ref hook
     const emailRef = useRef();
     const passwordRef = useRef();
 
