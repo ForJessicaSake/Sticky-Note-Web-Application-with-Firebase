@@ -6,9 +6,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import db from "../components/Firebase";
 import Sidebar from "../components/Sidebar";
 import Navbar from '../components/Navbar'
-
 import { motion } from "framer-motion";
 
+//creating the edit component
 export const Editing = ({ title, body, setNote, handleEdit }) => {
   return (
     <form className="flex flex-col mt-20 items-center">
@@ -37,8 +37,7 @@ export const Editing = ({ title, body, setNote, handleEdit }) => {
         whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgba(99 102 241)" }}
         className="mt-10 bg-purple w-48 p-4 text-white font-bold focus:outline-none rounded text-base"
       >
-        {" "}
-        Save{" "}
+        Save
       </motion.button>
     </form>
   );
@@ -163,8 +162,7 @@ function NotesDetails() {
                       }}
                       className="ml-4 text-purple py-1 px-4 focus:outline-none rounded text-base"
                     >
-                      {" "}
-                      Delete{" "}
+                      Delete
                     </motion.button>
                   </div>
                 </summary>
