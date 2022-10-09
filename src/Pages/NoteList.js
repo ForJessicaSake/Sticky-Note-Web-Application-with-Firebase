@@ -11,8 +11,11 @@ import Navbar from "../components/Navbar";
 
 
 function NoteList() {
+  
   //importing the created context global variables
   const { data, loading } = useContext(stateContext);
+  
+  //getting current user
   const currentUser = UseAuth();
 
   return (
@@ -37,7 +40,6 @@ function NoteList() {
           <p className="text-secondary text-xs w-96 smm:w-96 lgs:w-wt xxs:w-72 xxs:ml-10 lgs:ml-2 xms:w-96 flex justify-between smm:text-sm">
             {`${currentUser?.email}`}
             <span className="text-lg mr-12">
-              {" "}
               <ImUserCheck />
             </span>
           </p>
@@ -50,7 +52,6 @@ function NoteList() {
 
           <header className="flex justify-between mt-6  text-sm">
             <p className="xms:text-md lgs:text-md smm:text-sm">
-              {" "}
               What are we writing today?    
 
              <Link to ='/create' className="hidden xxs:block xms:block">  
@@ -73,11 +74,11 @@ function NoteList() {
               >
                 <section className=" p-8 text-sm tracking-wide ">
                   <h3 className="flex justify-between items-center align-middle font-semibold text-md">
-                    {notes.title}{" "}
+                    {notes.title}
                     <Link to={`/note/${notes.id}`}>
                       <span className="text-secondary font-bold">
                         <FaEdit />
-                      </span>{" "}
+                      </span>
                     </Link>
                   </h3>
                   <p className="text-xs mt-8">{notes.body}</p>
