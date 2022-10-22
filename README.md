@@ -42,7 +42,7 @@ Here are some of the links you should look out for to make navigation on the sit
 
 - Home Page - Juliet Ofoegbu
 
-- The Create Page - Jessica Joseph & Usman Gurowa
+- The Create Page - Jessica Joseph
 
 - The Note Page - Usman Gurowa & Jessica Joseph
 
