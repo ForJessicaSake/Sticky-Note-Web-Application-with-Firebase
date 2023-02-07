@@ -11,7 +11,6 @@ Dockett is a note taking web application designed for just anyone with busy sche
 - React-icons
 - Firebase
 - Tailwind
-- Material UI
 - Framer Motion
 - Google Fonts
 
