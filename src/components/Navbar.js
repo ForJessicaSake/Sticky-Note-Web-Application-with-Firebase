@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react'
 
-const Navbar= ()=> {
+function Navbar () {
 
    const [toggle, setToggle] = useState(false)
 
