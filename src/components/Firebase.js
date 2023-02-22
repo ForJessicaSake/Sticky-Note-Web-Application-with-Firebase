@@ -12,7 +12,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBbtl5VZKesEHbQhpF1h3AEF-XACHTGNdU",
+    apiKey:process.env.REACT_APP_API_KEY,
     authDomain: "notes-21a9f.firebaseapp.com",
     projectId: "notes-21a9f",
     storageBucket: "notes-21a9f.appspot.com",
