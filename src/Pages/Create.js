@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import { UseAuth } from "../components/Firebase";
 
-function Create() {
+const Create =()=> {
   //creating two states to keep track of the user's input
 
   const [title, setTitle] = useState("");
