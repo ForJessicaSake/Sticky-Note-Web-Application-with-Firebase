@@ -16,6 +16,8 @@ import "slick-carousel/slick/slick-theme.css"
 function Login() {
 //initializing the useNavigate hook
     const navigate = useNavigate()
+    console.log(process.env.REACT_APP_API_KEY);
+
     
     //importing global declared variables
     const { loading, setLoading } = useContext(stateContext)
