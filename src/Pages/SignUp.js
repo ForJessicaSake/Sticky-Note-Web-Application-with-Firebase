@@ -1,7 +1,7 @@
 import { useRef, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { stateContext } from '../App';
-import { signUp, UseAuth } from '../components/Firebase'
+import { signUp, UseAuth } from '../Utils/Firebase'
 import Slider from 'react-slick'
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import db from "./Firebase";
+import db from "../Utils/Firebase";
 import { onSnapshot, collection } from "firebase/firestore";
-import { UseAuth } from "./Firebase";
+import { UseAuth } from "../Utils/Firebase";
 
 function UseFetch(collectionName) {
 

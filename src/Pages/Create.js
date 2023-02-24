@@ -4,10 +4,10 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../components/Sidebar";
-import db from "../components/Firebase";
+import db from "../Utils/Firebase";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import { UseAuth } from "../components/Firebase";
+import { UseAuth } from "../Utils/Firebase";
 
 const Create =()=> {
   //creating two states to keep track of the user's input

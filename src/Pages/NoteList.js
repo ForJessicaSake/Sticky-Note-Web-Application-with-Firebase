@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { stateContext } from "../App";
 import { Link  } from "react-router-dom";
-import { UseAuth } from "../components/Firebase";
+import { UseAuth } from "../Utils/Firebase";
 import { ImUserCheck } from "react-icons/im";
 import { FaEdit } from "react-icons/fa";
 import Feed from "../components/Loading/Feed";

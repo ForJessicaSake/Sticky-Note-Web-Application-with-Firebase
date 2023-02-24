@@ -1,6 +1,6 @@
 import { useRef, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { logIn } from '../components/Firebase'
+import { logIn } from '../Utils/Firebase'
 import { stateContext } from '../App';
 import Slider from 'react-slick'
 import { ToastContainer, toast } from 'react-toastify';

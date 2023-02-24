@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Logout } from './Firebase'
+import { Logout } from '../Utils/Firebase'
 import { FiSettings, FiLogOut } from 'react-icons/fi'
 import { AiOutlineHome, AiOutlineFileAdd } from 'react-icons/ai'
 import { useContext } from 'react'

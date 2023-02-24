@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { doc, getDoc, deleteDoc, setDoc } from "firebase/firestore";
 import { useNavigate, useParams } from "react-router-dom";
-import db from "../components/Firebase";
+import db from "../Utils/Firebase";
 import Sidebar from "../components/Sidebar";
 import Navbar from '../components/Navbar'
 import { motion } from "framer-motion";
