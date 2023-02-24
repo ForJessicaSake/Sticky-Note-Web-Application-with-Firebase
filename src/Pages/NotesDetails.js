@@ -143,7 +143,7 @@ function NotesDetails() {
                     {note.title}
                   </p>
                   <br />
-                  <p className="lg:w-2/3 lg:mx-8 mx-auto leading-relaxed text-base">
+                  <p className="lg:w-12/12 text-sm lg:mx-8 mx-auto leading-relaxed">
                     {note.body}
                   </p>
                   <br />
