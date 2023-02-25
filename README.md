@@ -18,7 +18,7 @@ Introducing Dockett, the ultimate note-taking app for anyone with a busy schedul
 - Jessica Joseph
 - Juliet Ofoegbu
 - Usman Gurowa
-
+- Ben Gabriel
 ## Roadmap 🔍
 Here are some of the links you should look out for to make navigation on the site smooth for you. 
 
