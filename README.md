@@ -44,7 +44,7 @@ Here are some of the links you should look out for to make navigation on the sit
 
 - The Note Page - Usman Gurowa & Jessica Joseph
 
-- The NoteDetails Page - Juliet Ofoegbu & Jessica Joseph
+- The NoteDetails Page - Juliet Ofoegbu & Jessica Joseph & Ben Gabriel
 
 <!-- THE PRODUCT LINK -->
 
