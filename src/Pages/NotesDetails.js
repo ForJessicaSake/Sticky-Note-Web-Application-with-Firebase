@@ -5,41 +5,53 @@ import { doc, getDoc, deleteDoc, setDoc } from "firebase/firestore";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../Utils/Firebase";
 import Sidebar from "../components/Sidebar";
-import Navbar from '../components/Navbar'
+import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
 //creating the edit component
 export const Editing = ({ title, body, setNote, handleEdit }) => {
   return (
-    <form className="flex flex-col mt-20 items-center">
-      <input
-        className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
-        type="text"
-        maxLength="15"
-        value={title}
-        onChange={(e) => {
-          setNote((prev) => ({ ...prev, title: e.target.value }));
-        }}
-      />
-      <input />
-      <textarea
-        className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
-        type="text"
-        maxLength="200"
-        value={body}
-        onChange={(e) => {
-          setNote((prev) => ({ ...prev, body: e.target.value }));
-        }}
-      />
-      <textarea />
-      <motion.button
-        onClick={handleEdit}
-        whileHover={{ scale: 1.1, boxShadow: "0px 0px 5px rgba(99 102 241)" }}
-        className="mt-10 bg-purple w-48 p-4 text-white font-bold focus:outline-none rounded text-base"
-      >
-        Save
-      </motion.button>
-    </form>
+    <section>
+      <div className="hidden xxs:block xms:block xxs:w-screen w-screen">
+        <Navbar />
+      </div>
+      <main className="container flex  m-8 text-secondary">
+        <Sidebar text="Note List" url="/note" />
+        <form className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4">
+          <h1 className="text-lg font-bold text-blue mb-7 ">Edit Note</h1>
+          <input
+            className="border-2 w-w h-16 mr-2 text-sm rounded-xl p-5 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
+            type="text"
+            maxLength="15"
+            value={title}
+            onChange={(e) => {
+              setNote((prev) => ({ ...prev, title: e.target.value }));
+            }}
+          />
+          <input />
+          <textarea
+            className="border-2 w-w h-h p-5 mr-2 mt-12 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
+            type="text"
+            maxLength="200"
+            rows={7}
+            value={body}
+            onChange={(e) => {
+              setNote((prev) => ({ ...prev, body: e.target.value }));
+            }}
+          />
+          <motion.button
+            onClick={handleEdit}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 5px rgba(99 102 241)",
+            }}
+            className="mt-10 bg-purple w-48 p-4 text-white font-bold focus:outline-none rounded text-base"
+          >
+            Save
+          </motion.button>
+        </form>
+      </main>
+    </section>
   );
 };
 
@@ -60,7 +72,7 @@ function NotesDetails() {
     const payload = { title: note.title, body: note.body };
 
     const data = setDoc(docRef, payload, {
-      merge: true
+      merge: true,
     });
 
     setNote(data);
@@ -136,7 +148,7 @@ function NotesDetails() {
           <section className="container-two lg:flex  lg:px-12 mt-6">
             <Sidebar text="Add Note" url="/create" />
 
-       <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 smm:px-12 lgs:px-12 my-12">
+            <main className="lg:mx-12 lg:my-20 m-auto lg:p-2 smm:px-12 lgs:px-12 my-12">
               <article className="container px-5 text-left mx-auto">
                 <summary className="flex flex-col w-full mb-10">
                   <p className="lg:w-2/3 lg:mx-8 mx-auto font-bold mb-2 text-purple text-xl sm:text-xl">
@@ -168,7 +180,6 @@ function NotesDetails() {
                 </summary>
               </article>
             </main>
-            
           </section>
           <ToastContainer
             position="bottom-right"

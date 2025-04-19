@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import { UseAuth } from "../Utils/Firebase";
 
-const Create =()=> {
+const Create = () => {
   //creating two states to keep track of the user's input
 
   const [title, setTitle] = useState("");
@@ -44,9 +44,8 @@ const Create =()=> {
         draggable: true,
         progress: undefined,
       });
-  }
- }
-
+    }
+  };
 
   return (
     <section>
@@ -59,8 +58,9 @@ const Create =()=> {
           className="container-two flex flex-col ml-12 sm:ml-16 xxs:ml-4"
           onSubmit={handleAdd}
         >
+          <h1 className="text-lg font-bold text-blue mb-7 ">Create Note</h1>
           <input
-            className="border-2 w-w h-8 mr-2 text-sm rounded-xl p-4 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
+            className="border-2 w-w h-16 mr-2 text-sm rounded-xl p-5 xms:w-96 smm:w-wt lgs:w-w xxs:w-64"
             type="text"
             placeholder="heading"
             maxLength="15"
@@ -70,7 +70,7 @@ const Create =()=> {
             }}
           />
           <textarea
-            className="border-2 w-w h-h mr-2 mt-16 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
+            className="border-2 w-w h-h p-5 mr-2 mt-12 xxs:mt-8 xms:w-96 smm:w-wt lgs:w-w xxs:w-64 xxs:h-96"
             type="text"
             maxLength="200"
             value={body}
@@ -78,7 +78,6 @@ const Create =()=> {
               setBody(e.target.value);
             }}
           ></textarea>
-
           <motion.button
             whileHover={{
               scale: 1.1,
@@ -103,6 +102,6 @@ const Create =()=> {
       />
     </section>
   );
-}
+};
 
 export default Create;
